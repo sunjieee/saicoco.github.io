@@ -69,7 +69,7 @@ audio frame，然后将其作为`key-value`中的value保存至lmdb中。　　
 
 详细可以参看[Message API](https://developers.google.com/protocol-buffers/docs/reference/python/google.protobuf.message.Message-class)  
 
-以上就是DIY一个自己的lmdb数据库的建议过程，详细还需参看文档实现复杂功能。　　
+以上就是DIY一个自己的lmdb数据库的建议过程，详细还需参看文档实现复杂功能。代码可以在[github]()找到　　
 
 ### 写在后面的话　　
 
