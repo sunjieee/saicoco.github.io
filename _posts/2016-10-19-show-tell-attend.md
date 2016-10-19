@@ -5,7 +5,7 @@ tags: [paper]
 comments: true
 ---  
 
-最近终于入了attention机制的坑了，为什么呢，因为在object detection和各种VQA, 图像生成描述里面，都有这个东西，路子必须广~. 文章
+最近终于入了attention机制的坑了，为什么呢，因为在object detection和各种VQA, 图像生成描述里面，都有这个东西，路子必须广~. 文章[^1]
 主要阐释一种attention based model，用于自动学习图像的描述，即在给定图片的情况下，可以自动生成图像描述。如下图所示：  
 
 ![1](../downloads/caption/1.jpg)  
@@ -14,21 +14,23 @@ comments: true
 
 ## Image Caption Generation with Attention Mechanism  
 
-模型主要分为两块：　　
+模型主要分为两块：  
+　　
 * Encoder: CNN,用于提取图片区域特征 
 * Decoder: LSTM,用于将特征解码为描述信息
 
 ### ENCODER: CONVOLUTIONAL FEATURE  
 
 这里文章使用CNN去提取图片特征，如$$224\times224$$的图片经VGG之后可以得到$$14\times14\times512$$的feature maps,然后将其flatten成
-如下格式：　　
+如下格式：  
+　　
 $$
 \begin{equation}
 a = {a_1, ..., a_L}, a_i \in R^D
 \end{equation}
 $$  
 
-其中，L为向量的个数，每一个$a_i$是一个feature map, 若vgg则为$$14\times14=196$$．当然，为了获取图片对应位置的描述，文章使用底层卷
+其中，L为向量的个数，每一个$$a_i$$是一个feature map, 若vgg则为$$14\times14=196$$．当然，为了获取图片对应位置的描述，文章使用底层卷
 积层的feature, 因为low-level feature能够保留较多的图片信息，不像fully-connected layer feature,位置信息也丢掉了。　　
 
 ### DECODER: Long Short-Term Memory Network  
@@ -48,9 +50,8 @@ $$
 
 ![1](../downloads/caption/4.jpg)   
 
-即在给定输入a和已知隐藏层到隐藏层输出时，通过函数$$f_{att}$$映射得到e,利用e可以得到对应的概率，具体可以如下面代码表示：　　
+即在给定输入a和已知隐藏层到隐藏层输出时，通过函数$$f_{att}$$映射得到e,利用e可以得到对应的概率，具体可以如下面代码表示：  
 
->f_att  
 
 ```python  
 
