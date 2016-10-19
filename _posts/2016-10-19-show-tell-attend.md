@@ -16,21 +16,15 @@ comments: true
 
 模型主要分为两块：  
 　　
-* Encoder: CNN,用于提取图片区域特征 
-* Decoder: LSTM,用于将特征解码为描述信息
+* Encoder: CNN,用于提取图片区域特征   
+
+* Decoder: LSTM,用于将特征解码为描述信息  
+
 
 ### ENCODER: CONVOLUTIONAL FEATURE  
 
 这里文章使用CNN去提取图片特征，如$$224\times224$$的图片经VGG之后可以得到$$14\times14\times512$$的feature maps,然后将其flatten成
-如下格式：  
-　　
-$$
-\begin{equation}
-a = {a_1, ..., a_L}, a_i \in R^D
-\end{equation}
-$$  
-
-其中，L为向量的个数，每一个$$a_i$$是一个feature map, 若vgg则为$$14\times14=196$$．当然，为了获取图片对应位置的描述，文章使用底层卷
+如下格式:$$a = {a_1, ..., a_L}, a_i \in R^D$$,其中，L为向量的个数，每一个$$a_i$$是一个feature map, 若vgg则为$$14\times14=196$$．当然，为了获取图片对应位置的描述，文章使用底层卷
 积层的feature, 因为low-level feature能够保留较多的图片信息，不像fully-connected layer feature,位置信息也丢掉了。　　
 
 ### DECODER: Long Short-Term Memory Network  
@@ -52,36 +46,7 @@ $$
 
 即在给定输入a和已知隐藏层到隐藏层输出时，通过函数$$f_{att}$$映射得到e,利用e可以得到对应的概率，具体可以如下面代码表示：  
 
-
-```python  
-
-def attention_forward(X, X_proj, prev_h, W_proj_h, b_proj, W_att):  
-    """
-    Inputs: 
-    - X: feature vector of shape (N, L, D)
-    - X_proj: projected feature vector of shape (N, L, D)
-    - prev_h: previous hidden state of shape (N, H)
-    - W_proj_h: weights for projecting(or encoding) previous hidden state of shape (H, D)
-    - b_proj: biases for projecting of shape (D,)
-    - W_att: weigths for hidden-to-out of shape (D, 1)
-    Returns:
-    - context: output data (context vector) for soft attention of shape (N, D) 
-    - alpha: alpha weights for visualization of shape (N, L)
-    """
-    L = tf.shape(X)[1]
-    D = tf.shape(X)[2]
-
-    h_proj = tf.matmul(prev_h, W_proj_h)   # (N, D)
-    h_proj = tf.expand_dims(h_proj, 1)    # (N, 1, D)
-    hidden = tf.nn.relu(X_proj + h_proj + b_proj)   # (N, L, D)
-    hidden_flat = tf.reshape(hidden, [-1, D])
-    out =  tf.matmul(hidden_flat, W_att)   # (N x L, 1)   In this case, we don't need to add bias (because of softmax).
-    out =  tf.reshape(out, [-1 ,L])
-    alpha = tf.nn.softmax(out)    # (N, L)
-    alpha_expand = tf.expand_dims(alpha, 2)    # (N, L, 1)
-    context = tf.reduce_sum(X * alpha_expand, 1)    # (N, D)
-    return context, alpha
-```　　
+![1](../downloads/caption/5.png)   
 
 上下文z可以通过两种attention方法得到，以上是利用soft attention实现的，$$z_t = \phi({a_i}, {\alpha_i})$$，接下来我们就讲讲attention机制。　　
 
