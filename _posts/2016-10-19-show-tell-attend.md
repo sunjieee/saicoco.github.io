@@ -101,12 +101,16 @@ L_d = -log(P(y|x)) + \lambda\sum_{i}^{L}(1-\sum_{i}^{C}\alpha_{ti})^2
 $$  
 
 目标函数即在给定输入x时，对应y的最大概率，而惩罚项表示关注错误的区域会得到较大的惩罚，对loss会有较大的贡献，而对于关注正确的区域，则减小惩罚力度。详细代码可以
-看这里[show-attend-tell](https://github.com/yunjey/show-attend-and-tell)。
+看这里[show-attend-tell](https://github.com/yunjey/show-attend-and-tell), 论文看这里[Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](http://arxiv.org/abs/1502.03044)
 
 ### 写在后面的话　　
 
 一直想着马拉松应该不会被抽中，还是被抽中了，第一次跑全马啊，最近一直在跑步，调整跑姿，希望到时候不会太坑，感觉自己啥都看，可能是老板给的课题资源太少，多看，没错的，
-我一直这么觉得。
+我一直这么觉得。   
+
+### Reference  
+
+[^1]:Xu K, Ba J, Kiros R, et al. Show, Attend and Tell: Neural Image Caption Generation with Visual Attention[J]. Computer Science, 2015:2048-2057.
 
 
 
