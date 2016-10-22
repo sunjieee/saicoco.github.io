@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Python 多线程＋队列在读取大数据时的应用
+title: Python 多线程队列在读取大数据时的应用
 tags: [python]
 comments: true
----　　
+---  
+
 
 ### 多线程小试　　
 
