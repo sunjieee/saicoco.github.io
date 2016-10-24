@@ -64,6 +64,7 @@ $$E(\bar{s_t}) = \sum_{t=1}^{T} \rho(||\bar{s_t} - \bar{s_t}^{'}||_2)$$
 ![5](../downloads/vis/5.png)   
 上图为各种预测性能对比，可以看到准确率没过50%，即使是最高的，看来是个大坑啊(偷笑)。这篇文章就写到这里，剩下的文章实现细节issue里面会更新，当然这是说给我自己听了，谁会翻到我这个repo里面的wiki呢~
 
-写在2016.10.23
+写在2016.10.23  
+
 ### 参考文献  
 [^1]: Owens A, Isola P, Mcdermott J, et al. Visually Indicated Sounds[J]. Computer Science, 2016.
