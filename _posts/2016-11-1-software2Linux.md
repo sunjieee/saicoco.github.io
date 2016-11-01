@@ -33,8 +33,11 @@ qtcreator可以说是linux下的c++神器，可以做界面，可以编写各类
 除此之外各类语言的IDE可以去找[Intellij IDEA](https://www.jetbrains.com/products.html?fromMenu),做的越来越好了。编程篇就讲到这里啦。　　
 
 ## 日常软件篇
-就日常软件而言，这里我就一一列举。　　
-1.[Remarkable](http://remarkableapp.net/),　　
+就日常软件而言，这里我就一一列举  
+
+　
+1.[Remarkable](http://remarkableapp.net/),  
+　
 ![remark](../downloads/software/remark.png)  
 
 一款好用markdown编辑器支持预览，导出为PDF等一系列好用的功能，同时各种预览主题提供,支持三平台使用(win, linux, mac).  
