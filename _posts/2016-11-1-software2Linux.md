@@ -16,7 +16,8 @@ comments: true
 ![pycharm](../downloads/software/pycharm.png)  　　
 使用效果如下图所示：　　
 ![1](../downloads/software/1.png)  
-让你有个直观的感受，pycharm是一款比较好的IDE,最主要的是社区版简直不要太好用，支持各类插件，支持debug，支持大型项目，github等版本控制系统。比较而言下面这个....
+让你有个直观的感受，pycharm是一款比较好的IDE,最主要的是社区版简直不要太好用，支持各类插件，支持debug，支持大型项目，github等版本控制系统。比较而言下面这个....  
+
 #### [WingIDE](http://wingware.com/)  
 wingIDE是一款也不错，对于国内小伙伴来说肯定不愿意花钱去买一款IDE,这也成了使用人群不是很大的问题，值得一提的是，wingide补全功能简直不要太厉害，文档支持也很给力，这是我最开始使用它的原因。　　
 
@@ -32,3 +33,40 @@ qtcreator可以说是linux下的c++神器，可以做界面，可以编写各类
 除此之外各类语言的IDE可以去找[Intellij IDEA](https://www.jetbrains.com/products.html?fromMenu),做的越来越好了。编程篇就讲到这里啦。　　
 
 ## 日常软件篇
+就日常软件而言，这里我就一一列举。　　
+1.[Remarkable](http://remarkableapp.net/),　　
+![remark](../downloads/software/remark.png)  
+
+一款好用markdown编辑器支持预览，导出为PDF等一系列好用的功能，同时各种预览主题提供,支持三平台使用(win, linux, mac).  
+
+2.[有道词典](http://cidian.youdao.com/index-linux.html)  
+![youdao](../downloads/software/youdao.png)  
+深度出品，必为精品，有点夸张哈，但是在有deepin的存在，使得linux下的一些软件得以开发，使得我们有了一些了windows下的软件可以使用。　　
+
+3.[网易云音乐](http://music.163.com/#/download)  
+![wangyiyun](../downloads/software/wangyiyun.png)  
+自从用上了网易云，妈妈总问我为何跪着听音乐。　　
+
+4.[搜狗输入法](http://pinyin.sogou.com/linux/?r=pinyin)  
+![sougou](../downloads/software/sougou.png)  
+对于linux下来说，一个好用的输入法简直让人用起来很开心有木有。　　
+
+5.[Texmaker](https://www.baidu.com/link?url=CaF0a2CLIR1SWTft9fImlz5x09n7ujaP-TFsqOP4k7Y8sG3FyWweuyBOscstKj9k&wd=&eqid=a70a513a000438d10000000658186c7a)  
+无需像windows下需要自己下载一大堆集成包，linux下只需要texmaker+texlive就可以随时随地进行编辑latex.  
+
+6.[WPS](http://linux.wps.cn/)  
+![wps](../downloads/software/wps.png)
+想必你一直在寻找一款可以代替word, excel的软件，没错，wps值得拥有。　　
+
+7.[wineqq](http://www.qqtn.com/qqkey/wineqq/)    
+linux下的qq版本，随着ubuntuKylin的出现,各种支持它的软件都出现了。　　
+
+8.[steam](http://store.steampowered.com/)    
+![steam](../downloads/software/steam.png)
+想必在你累的时候想娱乐一把，steam平台是个好的软件，dota2便是其中的一款游戏，支持linux。　　
+
+9.[爱壁纸](http://www.lovebizhi.com/linux.html)  
+![aibizhi](../downloads/software/aibizhi.png)  
+相比于win下的搜狗壁纸，爱壁纸也是一款好用的壁纸软件  
+
+先写到这里，后续再补，估计不会有人看到，如果有问题，可以在[这里](https://github.com/saicoco/saicoco.github.io/issues/9)提交你的建议
