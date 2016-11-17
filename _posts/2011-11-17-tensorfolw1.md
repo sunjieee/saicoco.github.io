@@ -118,14 +118,14 @@ saver.restore(sess, FLAGS.train_dir)
 
 这样简单的模型搭建到运行就完成了。本文主要用到这些函数：  
 * `tf.placeholder`
-* 'tf.Variable'
-* 'tf.train'
-    * 'tf.train.GradientDenscentOptimizer'
-    * 'tf.train.SummaryWriter'
-    * 'tf.train.Saver'
-* 'tf.session'
-* 'tf.Graph'
-* 'tf.add_summary'
-* 'tf.merge_all_summaries'  
+* `tf.Variable`
+* `tf.train`
+    * `tf.train.GradientDenscentOptimizer`
+    * `tf.train.SummaryWriter`
+    * `tf.train.Saver`
+* `tf.session`
+* `tf.Graph`
+* `tf.add_summary`
+* `tf.merge_all_summaries`
 其实构建一个模型基本就用这些函数，然后就是一些数理计算方法。详情参看[tensorflow](https://www.tensorflow.org/)  
 今天下午发邮件问LSTM speaker naming的作者，结果意外加了微信，然后通了电话，问清楚了一些自己一直以来困惑的问题，大牛其实是没有架子的。还得多看论文。
