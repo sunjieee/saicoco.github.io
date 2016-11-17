@@ -90,42 +90,51 @@ sess.run(fetches, feed_dict=None, options=None, run_metadata=None)
 
 当然，在运行过程，我们可以通过可视化的操作来看网络运行情况。  
 在之前的`tf.scalar_summary`,我们可以通过：  
-```python
+
+```python  
+
 summary = tf.merge_all_summaries()
 ```   
 将在图构建阶段的变量收集起来，然后在session创建之后运行如下命令生成可视化的值。  
-```python
+
+```python  
+
 summary_str = sess.run(summary, feed_dict=feed_dict)
 summary_writer.add_summary(summary_str, step)
 ```   
 其中`summary_writer`由如下得到：  
-```python
+
+```python  
+
 summary_writer = tf.train.SummaryWriter(FLAGS.train_dir, sess.graph)
 ```  
 然后用tensorboard打开对应文件即可。  
 
 ### Save a Chenckpoint  
 对于模型的保存，可以通过如下代码实现：  
-```python
+
+```python  
 saver = tf.train.Saver()  
 saver.save(sess, FLAGS.train_dir, global_step=step)
 ```  
-而载入模型可以通过简单的模型来实现魔心搞得载入：  
+而载入模型可以通过简单的模型来实现魔心搞得载入：   
+
 ```python
+
 saver.restore(sess, FLAGS.train_dir)
 ```  
 当然了，模型的估计就类似上述了。  
 
 这样简单的模型搭建到运行就完成了。本文主要用到这些函数：  
-* `tf.placeholder`
-* `tf.Variable`
-* `tf.train`
-    * `tf.train.GradientDenscentOptimizer`
-    * `tf.train.SummaryWriter`
-    * `tf.train.Saver`
-* `tf.session`
-* `tf.Graph`
-* `tf.add_summary`
-* `tf.merge_all_summaries`
+* `tf.placeholder`  
+* `tf.Variable`  
+* `tf.train`  
+    * `tf.train.GradientDenscentOptimizer`  
+    * `tf.train.SummaryWriter`  
+    * `tf.train.Saver`  
+* `tf.session`  
+* `tf.Graph`  
+* `tf.add_summary`  
+* `tf.merge_all_summaries`  
 其实构建一个模型基本就用这些函数，然后就是一些数理计算方法。详情参看[tensorflow](https://www.tensorflow.org/)  
 今天下午发邮件问LSTM speaker naming的作者，结果意外加了微信，然后通了电话，问清楚了一些自己一直以来困惑的问题，大牛其实是没有架子的。还得多看论文。
