@@ -42,7 +42,9 @@ tf.placeholder(dtype, shape=None, name=None)
 ### Build the Graph  
 
 因为tf是通过构建图模型来进行网络搭建的，因此搭建网络也就是'Build the Graph'。  
+
 #### Inference  
+
 首先就是构建图，利用一系列符号将要表达的操作表达清楚，以用于后续模型的训练。如下面代码：  
 
 ```python
@@ -55,6 +57,7 @@ with tf.name_scope('hidden1'):
 
 ```  
 如上述代码，对于一个图的搭建，需要一些变量来支持我们的运算，比如矩阵相乘等，需要通过`tf.Variable`来声明变量，其参数格式如下：  
+
 ```python  
 
 tf.Variable(self, initial_value=None, trainable=True, collections=None, validate_shape=True,\
@@ -66,6 +69,7 @@ tf.Variable(self, initial_value=None, trainable=True, collections=None, validate
 #### Loss  
 
 在定义完图结构之后，我们需要有个目标函数，用作更新图结构中的各个变量。  
+
 ```python
 labels = tf.to_int64(labels)
 
@@ -77,10 +81,12 @@ cross_entropy = tf.nn.sparse_softmax_cross_entropy_with_logits(logits, labels, n
 ### Training  
 
 在得到目标函数之后，我们就可以对模型进行训练，这里常用梯度下降法。在训练阶段，我们可以通过`tf.scalar_summary`来实现变脸的记录，用作后续的tensorboard的可视化，如：  
+
 ```python
 tf.scalar_summary(loss.op.name, loss)
 ```  
 然后通过`tf.SummaryWriter()`来得到对应的提交值。而对于模型的最优化，这里tf提供了很多optimazer,通常在`tf.train`里面，这里常用的是`GradientDenscentOptimizer(lr)`,然后通过调用：  
+
 ```python
 train_op = optimizer.minimize(loss, global_step=global_step)
 ```  
@@ -88,10 +94,12 @@ train_op = optimizer.minimize(loss, global_step=global_step)
 ### Train the Model  
 
 在模型训练是，我们需要打开一个默认的图环境，用作训练，如：  
+
 ```python
 with tf.Graph().as_default():
 ```  
 以此来打开一个图结构，然后我们需要声明一个回话在所有操作都定义完毕之后，这样我们就可以利用这个session来运行Graph.可以通过如下方法声明：  
+
 ```python
 with tf.Session() as sess:
     init = tf.initialize_all_variables()
@@ -100,6 +108,7 @@ with tf.Session() as sess:
 
 ```
 每次我们可以通过`sess.run`来运行一些操作，进而获取其的输出值，  
+
 ```python
 sess.run(fetches, feed_dict=None, options=None, run_metadata=None)
 ```  
@@ -146,6 +155,7 @@ saver.restore(sess, FLAGS.train_dir)
 当然了，模型的估计就类似上述了。  
 
 这样简单的模型搭建到运行就完成了。本文主要用到这些函数：  
+
 * `tf.placeholder`  
 * `tf.Variable`  
 * `tf.train`  
