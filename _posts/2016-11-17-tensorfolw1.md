@@ -22,6 +22,7 @@ comments: true
 * Eval Output  
 
 ### Inputs and Placeholders  
+
 对于一个完整的网络来说，必定有输入还有输出，而`Placeholders`就是针对网络输入来的，相当与预先给输入变量占个坑，拿mnist来说，占坑代码可以如下面的例子：  
 
 ```python
@@ -39,6 +40,7 @@ tf.placeholder(dtype, shape=None, name=None)
 即需要提供占坑数据类型`dtype`,占坑数据`shape`,当然也可以给它提供一个唯一的`name`。  
 
 ### Build the Graph  
+
 因为tf是通过构建图模型来进行网络搭建的，因此搭建网络也就是'Build the Graph'。  
 #### Inference  
 首先就是构建图，利用一系列符号将要表达的操作表达清楚，以用于后续模型的训练。如下面代码：  
@@ -60,7 +62,9 @@ tf.Variable(self, initial_value=None, trainable=True, collections=None, validate
 
 ```  
 需要提供变量初始值`initial_value`, 是否接受训练`trainable`,对于`validate_shape`表示该变脸是否可以改变，如果形状可以改变，那么应该为`False`。对于每个变量，可以赋予不同的名字`tf.name_scope`。  
+
 #### Loss  
+
 在定义完图结构之后，我们需要有个目标函数，用作更新图结构中的各个变量。  
 ```python
 labels = tf.to_int64(labels)
@@ -69,7 +73,9 @@ cross_entropy = tf.nn.sparse_softmax_cross_entropy_with_logits(logits, labels, n
 
 ```  
 如上，通过给定的`labels`占坑变量，完成手写数字识别的最后交叉熵函数。  
+
 ### Training  
+
 在得到目标函数之后，我们就可以对模型进行训练，这里常用梯度下降法。在训练阶段，我们可以通过`tf.scalar_summary`来实现变脸的记录，用作后续的tensorboard的可视化，如：  
 ```python
 tf.scalar_summary(loss.op.name, loss)
@@ -78,7 +84,9 @@ tf.scalar_summary(loss.op.name, loss)
 ```python
 train_op = optimizer.minimize(loss, global_step=global_step)
 ```  
+
 ### Train the Model  
+
 在模型训练是，我们需要打开一个默认的图环境，用作训练，如：  
 ```python
 with tf.Graph().as_default():
@@ -89,7 +97,7 @@ with tf.Session() as sess:
     init = tf.initialize_all_variables()
 
     sess.run(init)
-    
+
 ```
 每次我们可以通过`sess.run`来运行一些操作，进而获取其的输出值，  
 ```python
@@ -122,6 +130,7 @@ summary_writer = tf.train.SummaryWriter(FLAGS.train_dir, sess.graph)
 然后用tensorboard打开对应文件即可。  
 
 ### Save a Chenckpoint  
+
 对于模型的保存，可以通过如下代码实现：  
 
 ```python  
