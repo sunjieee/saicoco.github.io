@@ -23,10 +23,12 @@ comments: true
 
 ### Inputs and Placeholders  
 对于一个完整的网络来说，必定有输入还有输出，而`Placeholders`就是针对网络输入来的，相当与预先给输入变量占个坑，拿mnist来说，占坑代码可以如下面的例子：  
+
 ```python
-images_placeholder = tf.placeholder(tf.float32, shape=(batch_size,
-                                                       mnist.IMAGE_PIXELS))
+images_placeholder = tf.placeholder(tf.float32, shape=(batch_size,mnist.IMAGE_PIXELS))
+
 labels_placeholder = tf.placeholder(tf.int32, shape=(batch_size))
+
 ```  
 
 上述代码相当于未mnist图片和标签分别占坑，而`tf.placeholder`参数可以如下面所示：  
@@ -43,21 +45,28 @@ tf.placeholder(dtype, shape=None, name=None)
 
 ```python
 with tf.name_scope('hidden1'):
-    weights = tf.Variable(tf.truncated_normal([IMAGE_PIXELS, hidden1_units],
-                    stddev=1.0 / math.sqrt(float(IMAGE_PIXELS))),name='weights')
-    biases = tf.Variable(tf.zeros([hidden1_units]),
-                 name='biases')
+    weights = tf.Variable(tf.truncated_normal([IMAGE_PIXELS, hidden1_units],\
+        stddev=1.0 / math.sqrt(float(IMAGE_PIXELS))),name='weights')
+
+    biases = tf.Variable(tf.zeros([hidden1_units]),\
+    name='biases')
+
 ```  
 如上述代码，对于一个图的搭建，需要一些变量来支持我们的运算，比如矩阵相乘等，需要通过`tf.Variable`来声明变量，其参数格式如下：  
-```python
-tf.Variable(self, initial_value=None, trainable=True, collections=None, validate_shape=True, caching_device=None, name=None, variable_def=None, dtype=None)
+```python  
+
+tf.Variable(self, initial_value=None, trainable=True, collections=None, validate_shape=True,\
+    caching_device=None, name=None, variable_def=None, dtype=None)
+
 ```  
 需要提供变量初始值`initial_value`, 是否接受训练`trainable`,对于`validate_shape`表示该变脸是否可以改变，如果形状可以改变，那么应该为`False`。对于每个变量，可以赋予不同的名字`tf.name_scope`。  
 #### Loss  
 在定义完图结构之后，我们需要有个目标函数，用作更新图结构中的各个变量。  
 ```python
 labels = tf.to_int64(labels)
+
 cross_entropy = tf.nn.sparse_softmax_cross_entropy_with_logits(logits, labels, name='xentropy')
+
 ```  
 如上，通过给定的`labels`占坑变量，完成手写数字识别的最后交叉熵函数。  
 ### Training  
@@ -78,7 +87,9 @@ with tf.Graph().as_default():
 ```python
 with tf.Session() as sess:
     init = tf.initialize_all_variables()
+
     sess.run(init)
+    
 ```
 每次我们可以通过`sess.run`来运行一些操作，进而获取其的输出值，  
 ```python
