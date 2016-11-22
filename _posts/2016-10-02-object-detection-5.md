@@ -1,8 +1,10 @@
 ---
 layout: post
 title: 目标检测--YOLO
-tags: [object detection]
+tag: object detection
 comments: true
+blog: true
+data: 2016-10-02
 ---
 
 ### 写在前面的话　　
@@ -26,7 +28,7 @@ $$cs = Pr(object)*IOU^{truth}_{pred}$$其中*Pr(object)*表示预测目标的概
 每一个bounding Box包含5个预测值：x, y, w, h, confidence。(x, y)表示相对于grid边界的bbox的中心位置，w,h则时相对于整张图片的width和height，最后IOU表示预测bbox和ground
 turth之间交叠的区域；当然，每个grid cell同样预测C个类条件概率$$Pr(class_{i}|object)$$，这些概率时基于grid包含的目标预测得到的，它的个数至于grid个数和类别数有关，和
 每个grid生成B个bboxes个数无关。在预测阶段，将$$Pr(class_{i}|object)$$和cs相乘，则可得到每个box的类别置信度：　　
-$$\begin{equation} 
+$$\begin{equation}
 Pr(class_{i}|object)*Pr(object)*IOU_{pred}^{truth}=Pr(class_{i})*IOU_{pred}^{truth}
 \end{equation}$$  
 
@@ -56,7 +58,7 @@ Pr(class_{i}|object)*Pr(object)*IOU_{pred}^{truth}=Pr(class_{i})*IOU_{pred}^{tru
 容易使得模型不稳定不易收敛。为解决这个问题，作者加大对bbox回归误差的惩罚，减少loss来自于不包含目标的grid,详细见公式。　　
 
 ![yolo](../downloads/object_detection/yolo/yolo3)  
-  
+
 同样的，均方误差对于大的bboxes和小的bboxes,一视同仁，我们知道对于相同的变动，小的bboxes比大的bboxes更为敏感，因此作者目标函数里使用了开方的形式，这样使得大的变化
 不如小的变化造成的影响大。即类似于log函数将图像的暗处显现出来道理一样。
 
@@ -71,8 +73,3 @@ Pr(class_{i}|object)*Pr(object)*IOU_{pred}^{truth}=Pr(class_{i})*IOU_{pred}^{tru
 对于目标检测，发现是个神器的领域，不管是学术还是工程，很实干，因此想好好学学，研究研究。也没想过会感兴趣，结果感兴趣了。还是佩服这帮大婶们，虽然我不喜欢学术，但是
 论文我还是喜欢读的。　　
 十一假期没心思玩，只想好好做做自己的事情，不论时学习，还是娱乐，都想做做自己的，今天下午看到剑雪封喉的视频了，怀念本科躺床上，听大力和阿忆在地上看视频的日子，真好～
-
-
-
-
-

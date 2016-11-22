@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Effective Python 29
-tags: [python]
+tag: python
 comments: true
+blog: true
+data: 2016-09-19
 ---
 
 ### 写在前面的话　　
@@ -27,7 +29,7 @@ class resistor(object):
         self.ohms = ohms
         self.voltage = 0
         self.current = 0
-        
+
 class voltageres(resistor):
     def __init__(self, ohms):
         super(voltageres, self).__init__(ohms)
@@ -54,7 +56,7 @@ if __name__ == '__main__':
 
 #### 要点　　
 
-* 编写新类时，应该使用简单的`public`属性来定义接口，而不要手工实现`set`和`get`方法。 
+* 编写新类时，应该使用简单的`public`属性来定义接口，而不要手工实现`set`和`get`方法。
 * 如果访问对象的某个属性时，需要表现出特殊行为，则使用`@property`来定义行为。
 * `@property`方法应该遵循最小惊讶原则，即应该符合广为人知的编程习惯。
 * `@property`方法需要执行迅速，缓慢或复杂的工作，应该放在普通方法里边。　　

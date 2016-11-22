@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Show, Attend and Tell, Neural Image Caption Generation with Visual Attention
-tags: [paper]
+tag: paper
 comments: true
+blog: true
+data: 2016-10-19
 ---  
 
 最近终于入了attention机制的坑了，为什么呢，因为在object detection和各种VQA, 图像生成描述里面，都有这个东西，路子必须广~. 文章[^1]
@@ -77,6 +79,3 @@ $$
 ### Reference  
 
 [^1]:Xu K, Ba J, Kiros R, et al. Show, Attend and Tell: Neural Image Caption Generation with Visual Attention[J]. Computer Science, 2015:2048-2057.
-
-
-

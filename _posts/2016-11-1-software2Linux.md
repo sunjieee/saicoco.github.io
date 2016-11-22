@@ -1,8 +1,10 @@
 ---
 layout: post
 title: 一些好用的ubuntu软件
-tags: [ubuntu]
+tag: ubuntu
 comments: true
+blog: true
+data: 2016-11-1
 ---
 有时翻看自己的系统，不由的担心万一那天崩掉这么多配置好的环境去哪里找，因此想整理出一篇blog记录一下自己迄今为止用过的比较好的软件，以防不测。　　
 

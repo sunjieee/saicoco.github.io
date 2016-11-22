@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Effective Python metaclass
-tags: [python]
+tag: python
 comments: true
+blog: true
+data: 2016-09-21
 ---
 
 ### 写在前面的话　　
@@ -17,7 +19,7 @@ comments: true
 
 #### metaclass的功能　　
 
-* 拦截类的创建 
+* 拦截类的创建
 * 修改类
 * 返回修改之后的类  
 
@@ -53,7 +55,7 @@ if __name__ == '__main__':
     print('before:', repr(foo.first_name), foo.__dict__)
     foo.first_name = 'Euler'
     print('after:', repr(foo.first_name), foo.__dict__)
-    
+
 ```  
 
 就这么简单的一个程序，我们来分析一下元类到底干了些什么：在创建类`BetterCustomer`时，python会在类中寻找属性`__metaclass__`，若未找到，则从其父类`DatabaseRow`

@@ -1,8 +1,10 @@
 ---
 layout: post
 title: 利用lmdb制作自己的数据库
-tags: [python]
+tag: python
 comments: true
+blog: true
+data: 2016-10-09
 ---  
 
 ### 写在前面的话　　

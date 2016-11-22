@@ -1,8 +1,10 @@
 ---
 layout: post
 title: 目标检测--Fast RCNN
-tags: [object detection]
+tag: object detection
 comments: true
+blog: true
+data: 2016-09-07
 ---
 ### 配置小插曲
 
@@ -16,9 +18,9 @@ comments: true
 就是这两行，在编译时找不到头文件或库文件时，可以利用`locate XXX.h`或是`locate libXXX.so`找到其所在路径，然后将其所在目录加入到`INCLUDE_DIRS`和`LIBRARY_DIRS`中，
 值得一提的时，Python库使用anaconda是极好的，因为它包含了大多数我们需要的库文件和头文件。以上就可以解决此类问题，可以避免各种系统环境变量配置的操作。当然也会遇到各种“未引用”
 的问题，我猜应该是库的版本不对应问题，升级到对应版本即可，此处注意的一般是opencv的问题，还是下源码编译就好，行了，开始正题。
- 
+
 ## Fast-RCNN  
- 
+
 还是这篇文章[fast-rcnn](https://github.com/rbgirshick/fast-rcnn)[^1]，最近一直在看代码，仔仔细细从头屡屡，对于RCNN暂时放一放。
 Fast-RCNN之所以称为Fast,较RCNN快在proposals获取:RCNN将一张图上的所有proposals都输入到CNN中，而Fast-RCNN利用卷积的平移不变形，一次性将所有的proposals投影到卷积后的feature maps上，
 极大的减少了运算量；其次则是端到端的训练，不像以前的模型：Selective search+Hog+SVM, SS+CNN+SVM这种分阶段训练手法，使得模型学习到的特征更为有效。
@@ -30,7 +32,7 @@ Fast-RCNN之所以称为Fast,较RCNN快在proposals获取:RCNN将一张图上的
 ![framework](../downloads/object_detection/framework.png)　　
 
 就上图开讲吧，Fast-RCNN可以分为这么几个模块：
- 
+
 * roi_data_layer
 * Deep ConvNet
 * roi_pooling_layer
@@ -41,8 +43,8 @@ roi_data_layer主要负责分别向Deep ConvNet和roi_pooling_layer提供整张�
 proposals投影到其对应feature maps上，然后利用roi_pooling_layer将ROI采样得到固定长度特征向量(ROI feature vector),
 然后送入最后的softmax和bbox regressor。这里主要详细讲讲roi_data_layer和roi_pooling_layer
 
-### roi_pooling_layer 
-  
+### roi_pooling_layer
+
 roi_pooling的作用是，将形状不一的propoasals通过maxpooling得到固定大小的maps,其思想来源于SPP-Net[^2],不同之处在于，SPP-Net是多层
 池化，roi_pooling是单层。如下图所示：　　
 
@@ -125,11 +127,11 @@ void ROIPoolingLayer<Dtype>::Forward_cpu(const vector<Blob<Dtype>*>& bottom,
     int roi_end_h = round(bottom_rois[4] * spatial_scale_);
     CHECK_GE(roi_batch_ind, 0);
     CHECK_LT(roi_batch_ind, batch_size);
-    
-    // 计算每个roi的长宽，用来放缩时使用 
+
+    // 计算每个roi的长宽，用来放缩时使用
     int roi_height = max(roi_end_h - roi_start_h + 1, 1);
     int roi_width = max(roi_end_w - roi_start_w + 1, 1);
-    
+
     // 通过计算roi与pooled_result之间的比例，可以实现feature maps上rois到pooled_result的投影。
     const Dtype bin_size_h = static_cast<Dtype>(roi_height)
                              / static_cast<Dtype>(pooled_height_);
@@ -144,7 +146,7 @@ void ROIPoolingLayer<Dtype>::Forward_cpu(const vector<Blob<Dtype>*>& bottom,
           // Compute pooling region for this output unit:
           //  start (included) = floor(ph * roi_height / pooled_height_)
           //  end (excluded) = ceil((ph + 1) * roi_height / pooled_height_)
-          
+
           // 利用比例关系，得到maxpool中每个位置对应feature maps的位置区域，而这是相对于0开始的，因此
           // 需要加上roi的起始坐标
           int hstart = static_cast<int>(floor(static_cast<Dtype>(ph)
@@ -168,7 +170,7 @@ void ROIPoolingLayer<Dtype>::Forward_cpu(const vector<Blob<Dtype>*>& bottom,
             top_data[pool_index] = 0;
             argmax_data[pool_index] = -1;
           }
-          
+
           // 对每个区域进行maxpooling
           for (int h = hstart; h < hend; ++h) {
             for (int w = wstart; w < wend; ++w) {
@@ -253,7 +255,7 @@ REGISTER_LAYER_CLASS(ROIPooling);
 
             # bbox_loss_weights blob: At most 4 targets per roi are active;
             # thisbinary vector sepcifies the subset of active targets
-            top[4].reshape(1, self._num_classes * 4) 
+            top[4].reshape(1, self._num_classes * 4)
 ```　　
 
 
@@ -264,5 +266,4 @@ REGISTER_LAYER_CLASS(ROIPooling);
 
 [^1]: Girshick R. Fast R-CNN[J]. Computer Science, 2015.   
 
-[^2]: He K, Zhang X, Ren S, et al. Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition[J]. 
-
+[^2]: He K, Zhang X, Ren S, et al. Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition[J].

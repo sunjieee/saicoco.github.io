@@ -1,8 +1,13 @@
 ---
 layout: post
 title: 论文笔记--Deep Captioning with Multimodal Recurrent Neural Networks(m-RNN)
-tags: [paper, RNN, multimodal]
+tags:
+- paper
+- RNN
+- multimodal
 comments: true
+blog: true
+date: 2016-07-21
 ---
 文章[^1]主要完成对于图像生成其内容描述，[项目主页](http://www.stat.ucla.edu/~junhua.mao/m-RNN.html),任务描述如下图所示：　　
 
@@ -39,7 +44,7 @@ comments: true
     if config.rnn_type == 'GRU':
       rnn_cell_basic = tf.nn.rnn_cell.GRUCell(rnn_size)
     elif config.rnn_type == 'LSTM':
-      rnn_cell_basic = tf.nn.rnn_cell.LSTMCell(rnn_size, input_size=emb_size, 
+      rnn_cell_basic = tf.nn.rnn_cell.LSTMCell(rnn_size, input_size=emb_size,
           use_peepholes=True)
     else:
       raise NameError("Unknown rnn type %s!" % config.rnn_type)
@@ -48,38 +53,38 @@ comments: true
           rnn_cell_basic, output_keep_prob=config.keep_prob_rnn)
     cell = tf.nn.rnn_cell.MultiRNNCell([rnn_cell_basic] * config.num_rnn_layers)
     state_size = cell.state_size
-    
+
     # Create word embeddings
-    self._embedding = embedding = tf.get_variable("embedding", 
+    self._embedding = embedding = tf.get_variable("embedding",
         [vocab_size, emb_size])
     inputs = tf.nn.embedding_lookup(embedding, self._input_data)
 
     if is_training and config.keep_prob_emb < 1:
       inputs = tf.nn.dropout(inputs, config.keep_prob_emb)
-    
+
     # Different ways to fuze text and visual information
     if config.multimodal_type == 'mrnn':
       mm_size = config.mm_size
       # Run RNNs
       if flag_reset_state:
-        self._initial_state = initial_state = tf.placeholder(tf.float32, 
+        self._initial_state = initial_state = tf.placeholder(tf.float32,
             [batch_size, state_size])
       else:
         self._initial_state = initial_state = cell.zero_state(
             batch_size, tf.float32)
       inputs = [tf.squeeze(input_, [1])
           for input_ in tf.split(1, num_steps, inputs)]
-      outputs_rnn, state = tf.nn.rnn(cell, inputs, 
+      outputs_rnn, state = tf.nn.rnn(cell, inputs,
           initial_state=initial_state,
           sequence_length=self._seq_lens)
       self._final_state = state
       output_rnn = tf.reshape(tf.concat(1, outputs_rnn), [-1, rnn_size])
-      
+
       # Map RNN output to multimodal space
       w_r2m = tf.get_variable("w_r2m", [rnn_size, mm_size])
       b_r2m = tf.get_variable("b_r2m", [mm_size])
       multimodal_l = tf.nn.relu(tf.matmul(output_rnn, w_r2m) + b_r2m)
-      
+
       # Map Visual feature to multimodal space
       w_vf2m = tf.get_variable("w_vf2m", [vf_size, mm_size])
       b_vf2m = tf.get_variable("b_vf2m", [mm_size])
@@ -89,7 +94,7 @@ comments: true
       multimodal_l = multimodal_l + mm_vf
       if is_training and config.keep_prob_mm < 1:
         multimodal_l = tf.nn.dropout(multimodal_l, config.keep_prob_mm)
-      
+
       # Map multimodal space to word space
       w_m2w = tf.get_variable("w_m2w", [mm_size, emb_size])
       b_m2w = tf.get_variable("b_m2w", [emb_size])

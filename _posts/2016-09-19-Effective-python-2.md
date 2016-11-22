@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Effective Python 31
-tags: [python]
+tag: python
 comments: true
+blog: true
+data: 2016-09-19
 ---
 
 ### 第31条　用描述符来改写需要复用的@property方法　　
@@ -14,12 +16,12 @@ comments: true
 class grade(object):
     def __set__(*args, **kwargs):
         #...
-    
+
     def __get__(*args, **kwargs):
         #...
 ```  
 
-  
+
 下面利用一个样例来解释描述符。　　
 
 ```python
@@ -71,6 +73,6 @@ if __name__ == '__main__':
 
 #### 要点　　
 
-* 如果想复用`@property`方法以及验证机制，那么可以自己定义描述符类。 
+* 如果想复用`@property`方法以及验证机制，那么可以自己定义描述符类。
 * `WeakKeyDictionary`可以保证描述符类不会发生泄露内存。
 * 通过描述符协议实现属性的获取和设置操作时，不要纠结于`__getattribute__`的方法具体运作细节。

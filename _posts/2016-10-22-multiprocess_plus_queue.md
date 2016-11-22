@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Python 多线程队列在读取大数据时的应用
-tags: [python]
+tag: python
 comments: true
+blog: true
+data: 2016-10-22
 ---  
 
 
@@ -108,4 +110,3 @@ from multiprocessing import Process
 ### 写在后面的话　　
 
 最近越来越对导师失去信心，学术本来是很纯粹的东西，在他眼里夹杂了太多的利益关系，人家只想静静的多看几篇paper...，希望可以坚持下去!
-

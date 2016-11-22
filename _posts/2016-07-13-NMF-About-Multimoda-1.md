@@ -1,8 +1,12 @@
 ---
 layout: post
 title: 论文笔记--Multimodal Concept Acquisition with Non-Negative Matrix Factorization
-tags: [paper, NMF]
+tags:
+- paper
+- NMF    
 comments: true
+blog: true
+date: 2016-07-13
 ---
 
 本文主要介绍非负矩阵(NMF)分解在cross-modal task上的应用，简称MCA-NMF[^1][^2]。对于来自不同传感器或接收器的数据，可以获取其之间联系
@@ -43,10 +47,10 @@ V = \begin{pmatrix} v_m & v_s \end{pmatrix}
 V \approx W \cdot H
 \end{equation}
 
-  
+
 矩阵$$V$$为$$d \times n$$，矩阵$$W$$和$$H$$分别为$$d \times k$$，$$k \times n$$,皆为非负矩阵。对于矩阵分解过程，上篇博文已将，利用分离度代价函数和乘性法则
-更新$$W$$和$$H$$,这里的分离度为$$D(V||WH)$$,即目标函数为： 
- 
+更新$$W$$和$$H$$,这里的分离度为$$D(V||WH)$$,即目标函数为：
+
 
 \begin{equation}
 \arg\min_{h} D_{I}(v_s, W_sh)
@@ -69,7 +73,7 @@ V \approx W \cdot H
 表示一系列动作，挥舞手臂，走路等姿态，作者通过人工映射的方法，如下表，将动作与语句对应起来：  
 
 ![table](../downloads/MCA_NMF/gesture_word.jpg)    
- 
+
 
 对于特征提取，gesture提取其二维直方图特征，包含姿态的关节角和速度，如下图所示：  
 

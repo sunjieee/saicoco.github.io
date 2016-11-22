@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Speaker Identification的思考
-tags: [thinking]
+tag: thinking
 comments: true
+blog: true
+data: 2016-10-14
 ---  
 
 ### 写在前面的话　　
@@ -40,7 +42,7 @@ mfcc特征，这里不知道是不是巧合，文中提到每帧对应5个随机
 
 因此，整个网络的任务就是如下几点：　　
 
-* 对于配对的人脸和语音，需要识别出正确的speaker，同时需要识别出是配对的人脸和语音 
+* 对于配对的人脸和语音，需要识别出正确的speaker，同时需要识别出是配对的人脸和语音
 * 对于不配对的人脸和语音，需要识别出正确的face, 同时需要识别出不是配对的人脸和语音
 
 idea目前就这么多，希望几个月后可以看到成果，加油～～

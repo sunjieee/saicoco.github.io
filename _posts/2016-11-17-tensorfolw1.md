@@ -1,8 +1,10 @@
 ---
 layout: post
-title: tensorflow使用笔记(1)
-tags: [tensorflow]
+title: tensorflow使用笔记(1)--全览
+tag: tensorflow
 comments: true
+blog: true
+data: 2016-11-17
 ---  
 
 今天开始计划开启一大块，主要关于tensorflow使用的，我想以blog的记录下来。因为实验需要，估计会用tensorflow实现LSTM等复杂操作，以此来熟悉tensorflow。  

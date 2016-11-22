@@ -1,8 +1,10 @@
 ---
 layout: post
 title: 目标检测--Faster RCNN1
-tags: [object detection]
+tag: object detection
 comments: true
+blog: true
+data: 2016-09-11
 ---
 ### 写在前面的话
 
@@ -17,7 +19,7 @@ Faster RCNN较Fast RCNN的优势之处在于对rois的选取，主要模块可�
 * proposal_layer
 * proposal_target_layer
 * roi_pooling_layer　　
-  
+
 整体流程图可以如下图所示：　　
 
 ![image](../downloads/object_detection/faster_rcnn.png)  
@@ -50,7 +52,7 @@ def generate_anchors(base_size=16, ratios=[0.5, 1, 2],
     # 这里选取16的原因在于，原始图像224x224,conv5卷积层输出feature maps大小为14x14,是16的缩放关系。对于
     # feature maps上的每个点，在width方向最大偏移为14,同理在height上也是14.
     # 在图像左上角生成一个anchors,剩下的anchors在此基础上做偏移即可得到。
-    # scales=[8, 16, 32], 
+    # scales=[8, 16, 32],
     base_anchor = np.array([1, 1, base_size, base_size]) - 1
     ratio_anchors = _ratio_enum(base_anchor, ratios)
     anchors = np.vstack([_scale_enum(ratio_anchors[i, :], scales)
@@ -61,7 +63,7 @@ def _whctrs(anchor):
     """
     Return width, height, x center, and y center for an anchor (window).
     """
-    
+
     w = anchor[2] - anchor[0] + 1
     h = anchor[3] - anchor[1] + 1
     x_ctr = anchor[0] + 0.5 * (w - 1)
@@ -115,7 +117,7 @@ def _scale_enum(anchor, scales):
 ```python
 
     class AnchorTargetLayer(caffe.Layer):
-    
+
     def setup(self, bottom, top):
         layer_params = yaml.load(self.param_str_)
         anchor_scales = layer_params.get('scales', (8, 16, 32))
@@ -227,7 +229,7 @@ def _scale_enum(anchor, scales):
 
         # overlaps between the anchors and the gt boxes(x1, y1, x2, y2, cls)
         # overlaps (ex, gt)
-        
+
         # 计算anchors与gt_boxes的overlap
         overlaps = bbox_overlaps(
             np.ascontiguousarray(anchors, dtype=np.float),
@@ -377,7 +379,7 @@ def _scale_enum(anchor, scales):
 
 作者用4步来训练模型:  
 
-* 利用pre-train模型初始化卷积部分，并对RPN部分进行训练 
+* 利用pre-train模型初始化卷积部分，并对RPN部分进行训练
 * 利用上一步训练好的权重初始化网络以及proposal_layer部分，用作训练fast R-CNN部分
 * 在上一步训练结束后，RPN和Fast R-CNN并没有实现卷积层的权重共享，因此利用两个网络的损失函数，固定卷积层部分，对RPN层单独进行微调，实现权重共享
 * 然后固定卷积层部分，微调Fast R-CNN部分，进而达到两个模型的统一。

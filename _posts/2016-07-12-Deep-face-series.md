@@ -1,8 +1,10 @@
 ---
 layout: post
 title: 论文笔记--DeepLearning face Recognition
-tags: [paper]
+tag: paper
 comments: true
+blog: true
+date: 2016-07-12
 ---
 这篇博客主要简单总结下deepLearning在人脸识别方面取得的进展，deepface[^1]，deepid[^2]，facenet[^3]是三个代表工作，由此揭开了deeplearning在人脸识别领域的篇章.
 
@@ -51,8 +53,8 @@ $$\gamma$$的目的在于避免除以一个很小的数。贴一下结果图![re
 
 ## 3.FaceNet: A Unified Embedding for Face Recognition and Clustering
 ---
-FaceNet创新之处在于抛弃以往的softmax分类层，采用欧氏距离比对方法训练模型，详细网络结构以及参数如下图所示： 
-![model](../downloads/deepface/model.png) 
+FaceNet创新之处在于抛弃以往的softmax分类层，采用欧氏距离比对方法训练模型，详细网络结构以及参数如下图所示：
+![model](../downloads/deepface/model.png)
 ![facenet](../downloads/deepface/facenet.png)  
 可以看到，在常用CNN结构时候加入L2归一化层，损失函数使用Triplte:
 $$
@@ -66,9 +68,8 @@ $$distance(anchor, positive) + \alpha \lt distance(anchor, negative)$$
 ## Reference
 ---
 
-[^1]: Taigman Y, Yang M, Ranzato M, et al. DeepFace: Closing the Gap to Human-Level Performance in Face Verification[C]// Conference on Computer Vision and Pattern Recognition. 2014:1701-1708. 
+[^1]: Taigman Y, Yang M, Ranzato M, et al. DeepFace: Closing the Gap to Human-Level Performance in Face Verification[C]// Conference on Computer Vision and Pattern Recognition. 2014:1701-1708.
 
-[^2]: Sun Y, Wang X, Tang X. Deep Learning Face Representation from Predicting 10,000 Classes[C]// Computer Vision and Pattern Recognition. IEEE, 2014:1891-1898. 
+[^2]: Sun Y, Wang X, Tang X. Deep Learning Face Representation from Predicting 10,000 Classes[C]// Computer Vision and Pattern Recognition. IEEE, 2014:1891-1898.
 
-[^3]: Schroff F, Kalenichenko D, Philbin J. FaceNet: A unified embedding for face recognition and clustering[C]// IEEE Conference on Computer Vision & Pattern Recognition. IEEE, 2015:815-823. 
- 
+[^3]: Schroff F, Kalenichenko D, Philbin J. FaceNet: A unified embedding for face recognition and clustering[C]// IEEE Conference on Computer Vision & Pattern Recognition. IEEE, 2015:815-823.

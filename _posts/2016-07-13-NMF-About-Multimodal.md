@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Non-Negative Matrix Factorization
-tags: [NMF]
+tags: NMF
 comments: true
+blog: true
+date: 2016-7-13
 ---
 
 本文主要介绍非负矩阵(NMF)分解,文章行文如下：
@@ -61,7 +63,7 @@ comments: true
 ![update2](../downloads/NMF/update2.gif)
 </div>
 
-在此代价函数下得加性更新法则有： 
+在此代价函数下得加性更新法则有：
 
 <div align=center>
 ![update_eld1](../downloads/NMF/update_eld1.gif)
@@ -86,7 +88,7 @@ comments: true
 ![update4](../downloads/NMF/update4.gif)
 </div>
 
-在此代价函数下得加性更新法则有： 
+在此代价函数下得加性更新法则有：
 
 <div align=center>
 ![diver_update](../downloads/NMF/diver_update.gif)
@@ -131,4 +133,3 @@ d=W*H;
 {% endhighlight %}
 
 这里再附一条theano版本的[NMF](https://github.com/saicoco/_practice/tree/master/theano_NMF)
-

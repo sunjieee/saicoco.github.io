@@ -1,8 +1,12 @@
 ---
 layout: post
 title: 论文笔记--Learning Deep Features for Discriminative Localization
-tags: [paper,attention]
+tag:
+- paper
+- attention
 comments: true
+blog: true
+data: 2016-09-28
 ---  
 
 ### 写在前面的话  

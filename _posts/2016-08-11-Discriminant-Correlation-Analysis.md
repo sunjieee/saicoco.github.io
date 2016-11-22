@@ -1,13 +1,18 @@
 ---
 layout: post
 title: 论文笔记--Discriminant Correlation Analysis
-tags: [paper, CCA, multimodal]
+tags:
+- paper
+- CCA
+- multimodal
 comments: true
+blog: true
+date: 2016-08-11
 ---
 今天的文章是一篇关于feature fusion的文章，文章发表在T-PAMI[^1]上，文章主要结合PCA+CCA或者LDA+CCA的特点，提出DCA.  
 
-The goal of the feature fusion for recognition is to combine relevant information from two or more feature 
-vectors into a single one, which is expected to be more discriminative than any of the input feature 
+The goal of the feature fusion for recognition is to combine relevant information from two or more feature
+vectors into a single one, which is expected to be more discriminative than any of the input feature
 vectors.
 
 文章指出，用于识别的特征融合目的在于结合来自多个不同模型的特征，使得融合后得到特征较单一输入特征更具有
@@ -37,7 +42,7 @@ $$Z_{2} = X^{*} + Y^{*} = W_{x}^T + W_{y}^{*}$$
 这里就两类样本做理论介绍，对于样本$$X, Y$$,文章分别做如下类似操作：  
 
 * 首先求得样本协方差$$S_{bx_{p \times p}}=\sum_{i=1}^{c} n_i(\bar{x}_i - \bar{x})(\bar{x}_i - \bar{x}) = \phi_{bx} \phi_{bx}^T$$
-* 其次利用协方差$$S_{bx_{p \times p}}$$求得特征向量$$P$$,通过式子$$P^T(\phi^{T}_{bx}\phi_{bx})P = \lambda$$,取其r个主分量为$$Q_{c \times r}$$, 
+* 其次利用协方差$$S_{bx_{p \times p}}$$求得特征向量$$P$$,通过式子$$P^T(\phi^{T}_{bx}\phi_{bx})P = \lambda$$,取其r个主分量为$$Q_{c \times r}$$,
 使得$$Q^T(\phi^{T}_{bx}\phi_{bx})Q = \lambda$$,经过变换可以得到$$S_{bx}$$的特征向量：$$(\phi_{bx}Q)^{T}S_{bx}(\phi_{bx}Q) = \lambda_{r \times r}$$,
 因此得到变换使得$$W^{T}_{bx}S_{bx}W_{bx} = I$$，因此原样本$$X_{r\times n}^{'} = W^{T}_{bx_{r \times p}}X_{p \times n}$$,同理可以得到样本$$Y$$的变换矩阵。
 * 在得到$$X^{'}, Y^{'}$$之后，可以得到$$S_{xy_{r \times r}}^{'}$$, 对齐进行SVD分解，并得到$$(U\sigma^{-1/2})^TS^{'}_{xy}(V\sigma^{-1/2}) = I$$
@@ -55,4 +60,3 @@ $$Z_{2} = X^{*} + Y^{*} = W_{x}^T + W_{y}^{*}$$
 ### Reference
 ----
 [^1]: Haghighat M, Abdel-Mottaleb M, Alhalabi W. Discriminant Correlation Analysis: Real-Time Feature Level Fusion for Multimodal Biometric Recognition[J].IEEE Transactions on Information Forensics & Security, 2016, 11(9):1984-1996.
-

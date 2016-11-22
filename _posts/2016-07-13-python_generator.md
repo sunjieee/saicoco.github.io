@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Python generator 在读取大数据时的应用
-tags: [python]
+tags: python
 comments: true
+blog: true
+date: 2016-07-13
 ---
 
 最近苦于电脑内存较小16G,在做深度学习时，由于keras中fit方法需一口气将数据读入内存，此时当数据较大时，占用系统交换分区的同时，还会带来运行较慢速度，甚至内存不足。经过几天的折腾，发现生成器(Generator)可以很好的解决此类问题，先贴代码吧：
@@ -132,4 +134,3 @@ def av_generator(batch_size, train=True):
 由于已经由保存好的h5数据，因此想着利用双层生成器达到不断生成数据的效果，但遇到的问题就是不知道何时会停止，造成难以管理等问题，翻看[keras issue](https://github.com/fchollet/keras/issues/1627),可以通过生成路径来获得对应数据，也算机智了一把。
 代码中文本文件用来生成的图片名和对应label，利用yield函数，达到占用较小内存，却可以实现读取较大数据的效果，算是时间换空间的做法,在最近版本keras中加入多线程，pickle_safe和nb_worker来实现多线程，此处参看网上线程安全装饰器，可以保证线程安全。同时keras中[ImageDataGenerator](http://keras.io/preprocessing/image/)提供了生成器接口，使得这一方法使用较为方便。
 在此过程中发现，可以利用多线程加速读取数据，但设计线程安全问题，此处就不深究了。
-
