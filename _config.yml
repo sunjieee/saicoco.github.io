@@ -7,7 +7,7 @@ description: 记录生活、学习、技术
 
 # if it's an external image, update below for true
 # better with square images
-external-image: true
+external-image: false
 picture: assets/images/profile.jpg
 
 # url: https://koppl.in/indigo
