@@ -90,10 +90,10 @@
     {% endif %}
  
     {% if site.weibo %}\
-	<a class="social-btn" href="http://www.weibo.com/{{ site.weibo }}" ><svg class="icon icon-weibo"><use xlink:href="#icon-weibo"></use></svg></a>
+	<a class="link" href="http://www.weibo.com/{{ site.weibo }}" ><svg class="icon icon-weibo"><use xlink:href="#icon-weibo"></use></svg></a>
     {% endif %}
 
     {% if site.zhihu %}
-	<a class="social-btn" href="https://www.zhihu.com/people/{{ site.zhihu }}"><svg class="icon icon-zhihu"><use xlink:href="#icon-zhihu"></use></svg><i class="fa fa-fw fa-zhihu"></i></a>
+	<a class="link" href="https://www.zhihu.com/people/{{ site.zhihu }}"><svg class="icon icon-zhihu"><use xlink:href="#icon-zhihu"></use></svg><i class="fa fa-fw fa-zhihu"></i></a>
     {% endif %}
 </div>
