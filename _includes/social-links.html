@@ -90,13 +90,13 @@
     {% endif %}
 
     {% if site.weibo %}
-	   <a class="link"  href="http://www.weibo.com/{{ site.weibo }}" target="_blank">
+	   <a class="link" data-title="微博" href="http://www.weibo.com/{{ site.weibo }}" target="_blank">
            <svg class="icon icon-weibo"><use xlink:href="#icon-weibo"></use></svg>
        </a>
     {% endif %}
 
     {% if site.zhihu %}
-	   <a class="link"  href="https://www.zhihu.com/people/{{ site.zhihu }}" target="_blank">
+	   <a class="link"  data-title="知乎" href="https://www.zhihu.com/people/{{ site.zhihu }}" target="_blank">
            <svg class="icon icon-zhihu"><use xlink:href="#icon-zhihu"></use></svg>
        </a>
     {% endif %}
