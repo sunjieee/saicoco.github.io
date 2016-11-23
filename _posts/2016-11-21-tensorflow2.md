@@ -2,6 +2,8 @@
 layout: post
 title: tensorflow使用笔记(2)--rnn_cell
 tag: tensorflow
+image: ../downloads/tf/image_header.png
+headerImage: true
 comments: true
 blog: true
 data: 2016-11-21
