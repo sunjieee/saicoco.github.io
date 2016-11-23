@@ -1,6 +1,6 @@
 # main text of home
-name: 一个叫Jia的男人准备XX 
-bio: 谁说XX就是XX的
+name: Never Backspace 
+bio: 千里之行，始于足下
 
 # twitter summary info
 description: 记录生活、学习、技术
@@ -11,7 +11,7 @@ external-image: false
 picture: assets/images/profile.jpg
 
 # url: https://koppl.in/indigo
-url: http://Jiajiageng.github.io
+url: http://saicoco.github.io
 
 permalink: /:title/
 
@@ -26,8 +26,8 @@ highlighter: rouge
 # analytics-piwik-id: 1
 
 # if you don't want comments in your posts, set to false
-disqus: mydisqus
-
+disqus: saicoco
+weibo: 2286127785
 # if you don't have any of social below, comment the line
 #facebook: myfacebook
 #twitter: mytwitter
@@ -39,7 +39,7 @@ disqus: mydisqus
 #spotify: myspotify
 github: saicoco
 # stackoverflow: 7044681/mystackoverflow
-# quora: userquora
+# quora: 
 #reddit: username
 #medium: medium
 #vimeo: myvimeo
@@ -61,7 +61,6 @@ projects: false
 # if you don't need "about" or "blog", comment them out below
 about: true
 blog: true
-tags: true
 # do you want to show the "read time" of the posts?
 read-time: true
 

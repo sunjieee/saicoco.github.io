@@ -11,7 +11,7 @@ external-image: false
 picture: assets/images/profile.jpg
 
 # url: https://koppl.in/indigo
-url: http://Jiajiageng.github.io
+url: http://saicoco.github.io
 
 permalink: /:title/
 
@@ -27,7 +27,8 @@ highlighter: rouge
 
 # if you don't want comments in your posts, set to false
 disqus: saicoco
-
+weibo: 2286127785
+zhihu: coco-sai
 # if you don't have any of social below, comment the line
 #facebook: myfacebook
 #twitter: mytwitter
@@ -39,7 +40,7 @@ disqus: saicoco
 #spotify: myspotify
 github: saicoco
 # stackoverflow: 7044681/mystackoverflow
-# quora: userquora
+# quora: 
 #reddit: username
 #medium: medium
 #vimeo: myvimeo
