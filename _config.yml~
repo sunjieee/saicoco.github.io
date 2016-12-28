@@ -1,6 +1,6 @@
 # main text of home
-name: Never Backspace
-bio: 千里之行，始于足下
+name: 思考边界
+bio: Stay Alive
 
 # twitter summary info
 description: 记录生活、学习、技术
@@ -8,7 +8,7 @@ description: 记录生活、学习、技术
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/profile.jpg
+picture: assets/images/pro.jpg
 
 # url: https://koppl.in/indigo
 url: http://saicoco.github.io
@@ -26,7 +26,8 @@ highlighter: rouge
 # analytics-piwik-id: 1
 
 # if you don't want comments in your posts, set to false
-disqus: saicoco
+# disqus: saicoco
+duoshuo: saicoco
 weibo: 2286127785
 zhihu: coco-sai
 # if you don't have any of social below, comment the line
