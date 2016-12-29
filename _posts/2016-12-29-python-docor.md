@@ -94,9 +94,6 @@ class SGD(Optimizer):
 
 以上代码在Optimazer.py中，然后你会在model.py中看到构造Optimazer时仅仅使用`create_optimizer(*args)`便可以得到对应的Optimazer,这里我好奇它的执行顺序，入口为函数`create_optimizer()`,终点为`class SGD`,那么通过基类如何构造子类，注意到有装饰器`@register`,所以首先执行类方法`register`,然后执行构建基类，再构建SGD,于是我做了如下测试：　　
 ```python
-# -*- coding=utf-8 -*-
-# Have a good day~
-
 class my_base(object):
     test_dict = {}
 
