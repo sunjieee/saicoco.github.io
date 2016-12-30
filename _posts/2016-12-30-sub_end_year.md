@@ -9,6 +9,10 @@ author: karl
 description: 多模态特征融合
 ---  　　
 
+献给未来的自己，Good Life!  
+
+<iframe height=498 width=510 src='http://player.youku.com/embed/XMjQ1MzAzNjY4' frameborder=0 'allowfullscreen'></iframe>
+
 ## 寄语　　
 
 过去的终将过去，不必纠结过去，要来的终究要来，拥抱惊喜!  
