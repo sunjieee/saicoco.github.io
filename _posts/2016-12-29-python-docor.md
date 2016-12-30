@@ -6,7 +6,7 @@ image: ../downloads/mxnet_register/register.png
 headerImage: true
 tag: python
 blog: true
-start: true
+star: true
 author: karl
 description: python装饰器
 ---  
