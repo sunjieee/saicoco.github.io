@@ -28,7 +28,7 @@ description: 多模态特征融合
 
 * 获得两个随机索引randh, rands,其中randh_为C个数，每个位置的数值为来自[0, num_outputs_)的随机数；rands_为C个数，值为[-1, 1]。降维逼近公式为：　　
 
-$Z_{h_i} = Z_{randh_i} + rands_i \times bottomx_{i}$
+$$Z_{h_i} = Z_{randh_i} + rands_i \times bottomx_{i}$$
 
 由上式，可以看出的是，如果操作向量是两个一维向量，那么降维后的向量的每个位置上的元素值由整个过程中抽中的randh_i和rands_i决定的；如果操作向量是张量，那么最后得到的向量上每个
 位置上为一个二维向量，其来自于randh_i,rands_i的对应原始向量中元素的组合。**可以注意到的是，这个阶段是不可学习的，即没有对应的映射函数，完全随机逼近**。　　
