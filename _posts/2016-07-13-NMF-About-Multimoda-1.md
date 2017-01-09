@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 论文笔记--Multimodal Concept Acquisition with Non-Negative Matrix Factorization
-tags:
+tag:
 - paper
 - NMF    
 comments: true

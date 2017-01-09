@@ -2,7 +2,7 @@
 layout: post
 title: 论文笔记--Discriminant Correlation Analysis
 date: 2016-08-11
-tags:
+tag:
 - paper
 - CCA
 - multimodal
