@@ -30,7 +30,7 @@ description: 多模态特征融合
 
 * 获得两个随机索引randh, rands,其中randh_为C个数，每个位置的数值为来自[0, num_outputs_)的随机数；rands_为C个数，值为[-1, 1]。降维逼近公式为：　　
 
-<img src="http://www.forkosh.com/mathtex.cgi? Z_{h_i} = Z_{randh_i} + rands_i \times bottomx_{i}">
+<img src="http://chart.googleapis.com/chart?cht=tx&chl= Z_{h_i} = Z_{randh_i} + rands_i \times bottomx_{i}">
 
 
 由上式，可以看出的是，如果操作向量是两个一维向量，那么降维后的向量的每个位置上的元素值由整个过程中抽中的randh_i和rands_i决定的；如果操作向量是张量，那么最后得到的向量上每个
@@ -40,7 +40,7 @@ description: 多模态特征融合
 
 利用上述得到的逼近向量b1, b2,转换至频域复数，对其进行内积：　　
 
-<img src="http://www.forkosh.com/mathtex.cgi?complexZ = FFT(b1) \cdot FFT(b2)">
+<img src="http://chart.googleapis.com/chart?cht=tx&chl= complexZ = FFT(b1) \cdot FFT(b2)">
 
 
 然后通过iFFT得到外积的后的值：Z = iFFT(complexZ),其中Z为(N, num_outputs_, HW)。　　
@@ -53,7 +53,7 @@ description: 多模态特征融合
 
 对于来自两个bottom的每个feature map，将其reshape为一维向量，通过两个映射w：  
 
-<img src="http://www.forkosh.com/mathtex.cgi?Z = F(\sigma (w_1 \cdot b_1), \sigma (w_2 \cdot b_2))">
+<img src="http://chart.googleapis.com/chart?cht=tx&chl= Z=F(\sigma (w_1 \cdot b_1), \sigma (w_2 \cdot b_2))">
 
 
 当然，这里可以加入bias,然后对于这种映射关系加入损失函数，目的使得映射后的分布与原始分布尽可能的一致(易分类)，或者是距离尽可能的近，同时保证Z的大小(HW)与b相同，这样可以用作加入注意力。　　
