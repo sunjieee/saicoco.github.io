@@ -1,6 +1,6 @@
 # main text of home
 name: Easy,Easy,Easy~
-bio: Viva La Vida
+bio: 生活从来没有容易过
 
 # twitter summary info
 description: 记录生活、学习、技术
@@ -8,7 +8,7 @@ description: 记录生活、学习、技术
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/me.jpg
+picture: assets/images/timg.jpg
 # url: https://koppl.in/indigo
 url: http://saicoco.github.io
 
@@ -30,7 +30,7 @@ duoshuo: saicoco
 weibo: 2286127785
 zhihu: coco-sai
 # if you don't have any of social below, comment the line
-#facebook: myfacebook
+# facebook: geng.jiajia.10
 #twitter: mytwitter
 # google: mygoogle
 # instagram: myinstagram
@@ -39,7 +39,7 @@ zhihu: coco-sai
 #youtube: myyoutube
 #spotify: myspotify
 github: saicoco
-# stackoverflow: 7044681/mystackoverflow
+#stackoverflow: 7044681/mystackoverflow
 quora: Jia-Geng
 #reddit: username
 #medium: medium
