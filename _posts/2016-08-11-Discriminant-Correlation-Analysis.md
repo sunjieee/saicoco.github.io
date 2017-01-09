@@ -1,13 +1,13 @@
 ---
 layout: post
 title: 论文笔记--Discriminant Correlation Analysis
+date: 2016-08-11
 tags:
 - paper
 - CCA
 - multimodal
 comments: true
 blog: true
-date: 2016-08-11
 ---
 今天的文章是一篇关于feature fusion的文章，文章发表在T-PAMI[^1]上，文章主要结合PCA+CCA或者LDA+CCA的特点，提出DCA.  
 

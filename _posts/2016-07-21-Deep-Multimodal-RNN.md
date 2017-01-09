@@ -1,13 +1,13 @@
 ---
 layout: post
 title: 论文笔记--Deep Captioning with Multimodal Recurrent Neural Networks(m-RNN)
+date: 2016-07-21
 tags:
 - paper
 - RNN
 - multimodal
 comments: true
 blog: true
-date: 2016-07-21
 ---
 文章[^1]主要完成对于图像生成其内容描述，[项目主页](http://www.stat.ucla.edu/~junhua.mao/m-RNN.html),任务描述如下图所示：　　
 
