@@ -1,16 +1,17 @@
 # main text of home
-name: Easy,Easy,Easy~
-bio: Viva La Vida
+name: Jiageng
+bio: 一个叫佳佳的男人准备工作
 
 # twitter summary info
-description: 记录生活、学习、技术
+description: 记录生活、学习、思考
 
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/me.jpg
-# url: https://koppl.in/indigo
-url: http://saicoco.github.io
+picture: assets/images/profile.jpg
+
+#url: https://koppl.in/indigo
+url: http://Jiajiageng.github.io
 
 permalink: /:title/
 
@@ -25,44 +26,55 @@ highlighter: rouge
 # analytics-piwik-id: 1
 
 # if you don't want comments in your posts, set to false
-# disqus: saicoco
-duoshuo: saicoco
-weibo: 2286127785
-zhihu: coco-sai
+disqus: mydisqus
+
 # if you don't have any of social below, comment the line
-#facebook: myfacebook
-#twitter: mytwitter
+facebook: myfacebook
+twitter: mytwitter
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
 # linkedin: mylinkedin
-#youtube: myyoutube
-#spotify: myspotify
-github: saicoco
-# stackoverflow: 7044681/mystackoverflow
-quora: Jia-Geng
-#reddit: username
-#medium: medium
-#vimeo: myvimeo
-email: gjj0816@gmail.com
+youtube: myyoutube
+spotify: myspotify
+github: sai
+stackoverflow: 7044681/mystackoverflow
+quora: userquora
+reddit: username
+medium: medium
+vimeo: myvimeo
+email: myemail@gmail.com
 
+authors:
+    johndoe:
+        name: John Doe
+        bio: A Man who travels the world eating noodles
+        external-image: false
+        picture: assets/images/profile.jpg
+        twitter: johndoe
+    jamesfoster:
+        name: James Foster
+        bio: A Man who develops software with coffee
+        external-image: false
+        picture: assets/images/james.jpg
+        twitter: jamesfoster
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
 # normal = 560px / large = 810px
-width: large
+width: normal
 
 # if you don't need pagination, comment the *paginate* configs below
-paginate: 6
-paginate_path: "blog/:num/"
+# paginate: 5
+# paginate_path: "blog/:num/"
 
 # if you don't need projects, comment the *projects* configs below
-projects: false
+projects: true
 
 # if you don't need "about" or "blog", comment them out below
 about: false
 blog: true
-Tags: true
+
 # do you want to show the "read time" of the posts?
 read-time: true
 
@@ -73,10 +85,10 @@ show-tags: true
 related: true
 
 # show next & prev links in blog post?
-blog-nav-links: true
+blog-nav-links: false
 
 # show author block at the end of a post ?
-show-author: false
+show-author: true
 
 # do you want some animations?
 animation: true
