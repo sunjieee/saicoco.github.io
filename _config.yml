@@ -1,6 +1,6 @@
 # main text of home
-name: GOOD LIFE
-bio: Stay Alive
+name: Easy,Easy,Easy~
+bio: Viva La Vida
 
 # twitter summary info
 description: 记录生活、学习、技术
@@ -8,7 +8,7 @@ description: 记录生活、学习、技术
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/pro.jpg
+picture: assets/images/me.jpg
 # url: https://koppl.in/indigo
 url: http://saicoco.github.io
 
