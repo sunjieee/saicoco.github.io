@@ -1,74 +1,294 @@
-<p align="center">
-    <h2 align="center">Indigo Minimalist Jekyll Template - <a href="http://sergiokopplin.github.io/indigo/">Demo</a> · <a href="https://travis-ci.org/sergiokopplin/indigo"><img src="https://camo.githubusercontent.com/5393485b732749b3499264168fa8af60166071e8/68747470733a2f2f7472617669732d63692e6f72672f73657267696f6b6f70706c696e2f696e6469676f2e7376673f6272616e63683d67682d7061676573" alt="Build Status" data-canonical-src="https://travis-ci.org/sergiokopplin/indigo.svg?branch=gh-pages" style="max-width:100%;"></a></h2>
-</p>
+# HMFAYSAL OMEGA THEME
 
-<p align="center">This is a simple and minimalist template for Jekyll for those who likes to eat noodles.</p>
+Project name:	HMFAYSAL OMEGA THEME  
+Author:	Hossain Mohd Faysal  
+Project type:	The Coolest Theme for Jekyll 
+License:	MIT License 
+  
+HMFAYSAL OMEGA is a minimalist, beautiful, responsive theme for Jekyll designed for engineers as well as writers who want their content to take front and center. This theme elegantly wraps each page and post with featured images complementing the content. It was built -- by Engineer slash Mathematician [Hossain Mohd Faysal](http://alum.mit.edu/www/hmfaysal/).
 
-***
+The theme features:
 
-<p align="center">
-    <b><a href="README.md#what-has-inside">What has inside?</a></b>
-    |
-    <b><a href="README.md#setup">Setup?</a></b>
-    |
-    <b><a href="README.md#settings">Settings</a></b>
-    |
-    <b><a href="README.md#how-to">How to</a></b>
-    |
-    <b><a href="README.md#tests">Tests</a></b>
-</p>
+* Twitter Bootstrap 3
+* Option to set featured image that wraps your post in header and footer
+* Custom Javascript to emphasize the first paragraph `p:first-child` of your post
+* Variable templates for articles, quotation, video, photo and status updates (post types)
+* Display Equations via Native MathJax Support
+* Plugin-free/Github Pages Deployment Ready
+* Read time Calculator: Calculation of post read-time based on word count (Via Liquid Tags instead of a plugin)
+* Complex pagination script if you decide to turn pagination on
+* CSS3 transitions for better performance 
+* Ability to turn of animations in _config.yml
+* Readable typography to make your words shine
+* Disqus comments if you choose to enable
+* Simple and clear permalink structure
+* Footer Menu
+* SVG graphics
+* Google Fonts
+* 361 Fontawesome icons
+* Tags for [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) for a better social sharing experience
+* Beautifully crafted [404 page](http://hmfaysal.github.io/hmfaysal-omega-theme/404.html)
+* Custom [categories](http://hmfaysal.github.io/hmfaysal-omega-theme/categories/) and [tags](http://hmfaysal.github.io/hmfaysal-omega-theme/tags/) pages for viewers pleasure
+* Stylesheets for Pygments and Coderay to make your code examples look snazzy
+* Simple search that overlays results based on post title
+* Sitemap for search engines
+* Designed by an Electrical Engineer
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/assets/screen-shot.png" />
-</p>
+For a full list of features, visit [this link](http://hmfaysal.github.io/hmfaysal-omega-theme/theme-setup/about-hmfaysal-omega/)
 
-## What has inside?
+![screenshot of HMFAYSAL OMEGA Theme](https://raw.github.com/hmfaysal/hmfaysal-omega-theme/gh-pages/images/hmfaysal-omega-preview.jpg)
 
-- [Jekyll](https://jekyllrb.com/), [Gulp](http://gulpjs.com/), [Sass](http://sass-lang.com/) ~[RSCSS](http://rscss.io/)~ and [SVG](https://www.w3.org/Graphics/SVG/)
-- Tests with [Travis](https://travis-ci.org/)
-- Google Speed: [98/100](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsergiokopplin.github.io%2Findigo%2F);
-- No JS. :sunglasses:
+## Basic Setup for a new Jekyll site
 
-## Setup
+1. [Install Jekyll](http://jekyllrb.com) and read through [this installation instructions](http://hmfaysal.github.io/hmfaysal-omega-theme/theme-setup/installing-jekyll-on-windows/) if you haven't already.
+2. Fork the [HMFAYSAL OMEGA Theme](https://github.com/hmfaysal/hmfaysal-omega-theme/fork)
+3. Clone the repo you just forked.
+4. Edit `_config.yml` to personalize your site.
+5. Check out the sample posts in `_posts` to see examples for pulling in large feature images, assigning categories and tags, and other YAML data.
+6. Read the documentation below for further customization pointers and documentation.
 
-0. :star: to the project. :metal:
-1. [Install Jekyll](http://jekyllrb.com), [NodeJS](https://nodejs.org/) and [Bundler](http://bundler.io/).
-2. Fork the project [Indigo](https://github.com/sergiokopplin/indigo/fork)
-3. Edit `_config.yml` with your data.
-4. `bundle install`
-5. `npm run serve`
-6. open in your browser: `http://localhost:4000`
 
-## Settings
+**Pro-tip:** Delete the `gh-pages` branch after cloning and start fresh by branching off `master`. There is a bunch of garbage in `gh-pages` used for the theme's demo site that I'm guessing you don't want on your site.
 
-You must fill some informations on `_config.yml` to customize your site.
+---
 
-```
-name: John Doe
-bio: 'A Man who travels the world eating noodles'
-picture: 'assets/images/profile.jpg'
-...
+## Setup for an Existing Jekyll site
 
-and lot of other options, like width, projects, pages, read-time, tags, related posts, animations, multiple-authors, etc.
-```
+1. Clone the following folders: `_includes`, `_layouts`, `_pages`, `assets`, and `images`.
+2. Set the following default variables in your `_config.yml` file:
 
-## How to:
+``` yaml
+title:            Site Title
+description:      Site description for the metas.
+logo:             omikron.png
+disqus_shortname: shortname
+# Assign a default image for your site's header and footer
+default_bg:       default_bg.jpg
+search:           true
+share:            true
+# Read Time is a calculator tp provide post read-time based on word count. Usage is recommended.
+readtime:         true
+# Turn on or off the fin animations in the header and footer
+triangleheader:	  true
+animated_fins:    true
+# Specify the fin color in RGB value
+fin_color:        "255,255,255"
+# Change url to your domain. Leave localhost server or blank when working locally.
+url:              http://localhost:4000
+# baseurl:           
 
-- Article: How to Install Jekyll - by [Arti Annaswamy](https://github.com/aannasw). [Part 1](http://artiannaswamy.com/build-a-github-blog-part-1) and [Part 2](http://artiannaswamy.com/build-a-github-blog-part-2)
-- [Emojis in the projects list?](https://github.com/sergiokopplin/indigo/issues/72)
-- [Nokogiri dependencie problems?](https://github.com/sergiokopplin/indigo/issues/81)
-- [Syncing a Fork](https://help.github.com/articles/syncing-a-fork/)
-- [Tests with Travis CI - Tutorial](http://www.raywenderlich.com/109418/travis-ci-tutorial)
-- [Why Sass?](https://github.com/sergiokopplin/indigo/issues/117)
+# Gems used
+gems:
+  - jekyll-feed
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-seo-tag
 
-## Tests
+# Archives configuration
+# https://github.com/jekyll/jekyll-archives/blob/master/docs/configuration.md
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: 'archive'
+  permalinks:
+    # year: '/:year/'
+    # month: '/:year/:month/'
+    # day: '/:year/:month/:day/'
+    tag: '/archive/tag/:name/'
+    category: '/archive/category/:name/'
 
-You can test your app with:
+# Owner/author information
+author:
+  name:           Your Name
+  picture:        your-photo.jpg
+  email:          your@email.com
+  # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
+  description:    Some Details about yourself
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:
+  facebook:
+  github:
+  linkedin:
+  instagram:
+  tumblr:
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:    "http://plus.google.com/123123123123132123"
 
-```bash
-npm run test
+# Analytics and webmaster tools stuff goes here
+google_analytics:
+google_verify:
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: Home
+    url: /
+    external: false
+    icon: home
+  - title: Categories
+    url: /categories
+  - title: Tags
+    url: /tags
+
+# Sitemap configuration
+# https://github.com/kinnetica/jekyll-plugins
+sitemap:
+    file: "/sitemap.xml"
+    exclude:
+        - "/atom.xml"
+        - "/feed.xml"
+        - "/feed/index.xml"
+    include_posts:
+        - "/index.html"
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    America/New_York
+future:      true
+markdown:    kramdown
+highlighter: rouge
+paginate:    6
+paginate_path: "/blog/:num/"
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title
+  pages:
+    output: true
+    permalink: /:title
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
 ```
 
 ---
 
-[MIT](http://kopplin.mit-license.org/) License © Sérgio Kopplin
+## Post Front Matter YAML
+
+HMFAYSAL OMEGA uses variable post templates for articles, quotation, video, photo and status updates. 
+
+A new blog post should have the following structure to utilise the themes functions
+
+``` yaml
+---
+layout: post
+title: "Some Title"					# Title of the post
+description: Some description		# Description of the post, used for Facebook Opengraph & Twitter
+headline: Some headline				# Will appear in bold letters on top of the post
+modified: YYYY-MM-DD				# Date
+category: personal
+tags: []
+image: 
+  feature: some-image.jpg
+comments: true
+mathjax:
+---
+```
+
+A new status should have the following structure to utilise the themes functions
+
+``` yaml
+---
+layout: post
+type: status                # ! Important
+title: "Some Title"         # Title of the post
+description: Some description   # Description of the post, used for Facebook Opengraph & Twitter
+headline: Some headline       # Will appear in bold letters on top of the post
+modified: YYYY-MM-DD        # Date
+category: personal
+tags: []
+image: 
+  feature: some-image.jpg
+comments: true
+mathjax:
+---
+```
+
+A new quotation post should have the following structure to utilise the themes functions
+
+``` yaml
+---
+layout: post
+type:  quote                # ! Important
+title: "Some Title"         # Title of the post
+description: Some description   # Description of the post, used for Facebook Opengraph & Twitter
+headline: Some headline       # Will appear in bold letters on top of the post
+modified: YYYY-MM-DD        # Date
+category: personal
+tags: []
+image: 
+  feature: some-image.jpg
+comments: true
+mathjax:
+---
+```
+
+A new video post should have the following structure to utilise the themes functions
+
+``` yaml
+---
+layout: post
+type:  video                # ! Important
+title: "Some Title"         # Title of the post
+description: Some description   # Description of the post, used for Facebook Opengraph & Twitter
+headline: Some headline       # Will appear in bold letters on top of the post
+modified: YYYY-MM-DD        # Date
+category: personal
+tags: []
+image: 
+  feature: some-image.jpg
+comments: true
+mathjax:
+---
+```
+
+A new photo post should have the following structure to utilise the themes functions. By default, the featured image is shown on the blog index, but if you want to display another photo, you can choose to do so :)
+
+``` yaml
+---
+layout: post
+type:  photo                # ! Important
+photo: some-image.jpg 		# In case you do not want the featured image to display on the front page
+title: "Some Title"         # Title of the post
+description: Some description   # Description of the post, used for Facebook Opengraph & Twitter
+headline: Some headline       # Will appear in bold letters on top of the post
+modified: YYYY-MM-DD        # Date
+category: personal
+tags: []
+image: 
+  feature: some-image2.jpg
+comments: true
+mathjax:
+---
+```
+
+---
+
+## Questions?
+
+Having a problem getting something to work or want to know why I setup something in a certain way? Ping me on Twitter [@hmfaysal](http://twitter.com/hmfaysal) or [file a GitHub Issue](https://github.com/hmfaysal/hmfaysal-omega-theme/issues/new).
+
+---
+
+## Requests?
+
+If you have some specific requests for this theme, or if you need help custom coding some elements, message me on Twitter [@hmfaysal](http://twitter.com/hmfaysal) or email me at [hmfaysal@alum.mit.edu](mailto:hmfaysal@alum.mit.edu)
+
+---
+
+## License
+
+This theme is free and open source software, distributed under the [The MIT License](LICENSE). So feel free to use this Jekyll theme on your site without linking back to me or using a disclaimer.
+
+If you'd like to give me credit somewhere on your blog or tweet a shout out to [@hmfaysal](https://twitter.com/hmfaysal), that would be pretty sweet.
+
+
+Warm Regards and Stay Creative,  
+Hossain Mohd. Faysal
