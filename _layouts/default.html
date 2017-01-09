@@ -17,33 +17,26 @@ layout: compress
     {% include favicon.html %}
 
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ "
-    /feed.xml" }}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ "/feed.xml" }}" />
 
     <style>
     {% capture scss_sheet %}{% include style.scss %}{% endcapture %}
     {{ scss_sheet | scssify }}
-
     </style>
-
-    <script type="text/javascript"
-            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
 
 </head>
 <body>
 
-<div class="wrapper-{% if site.width == " normal
-" %}normal{% elsif site.width == "large" %}large{% endif %}">
-{% if page.tag %}
-<div class="post">
-    {% else %}
-    {% if showHeader != true %}
-    <div class="page {{ page.title | downcase }}">
+    <div class="wrapper-{% if site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}">
+        {% if page.tag %}
+            <div class="post">
         {% else %}
-        <div class="{{ page.title | downcase }}">
+            {% if showHeader != true %}
+                <div class="page {{ page.title | downcase }}">
+            {% else %}
+                <div class="{{ page.title | downcase }}">
             {% endif %}
-            {% endif %}
+        {% endif %}
 
             {{ content }}
         </div>

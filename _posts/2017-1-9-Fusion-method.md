@@ -9,6 +9,8 @@ author: karl
 description: 多模态特征融合
 ---    
 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 最近一直在努力将MCB应用与语音和人脸的特征融合，在一遍一遍的阅读源码之后，想在github上issue，但觉得不足以表达想法，因此还是以博文形式记录，以防以后用到。　　
 
 ## MCB步骤解剖　　
