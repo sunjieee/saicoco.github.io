@@ -78,7 +78,7 @@ class DataIter(object):
 其他DataIter.接下来我们就这几个方法看看官方提供DataIter干了些什么。　　
 
 ### NDArrayIter  
-`NDarrayIter`由名字可以看出它是基于ndarray的数据迭代器，即数据来源是numpy数据。由[官方文档mxnet.io.NDArrayIter](http://mxnet.io/api/python/io.html#mxnet.io.NDArrayIter)可知，
+`NDarrayIter`由名字可以看出它是基于ndarray的数据迭代器，即数据来源是numpy数据。由[官方文档`mxnet.io.NDArrayIter`](http://mxnet.io/api/python/io.html#mxnet.io.NDArrayIter)可知，
 `NDarrayIter`参数主要如下：　　
 
 **Parameters**:  
@@ -93,7 +93,6 @@ class DataIter(object):
 
 ```python  
 def _init_data(data, allow_empty, default_name):
-    """Convert data into canonical form."""
     assert (data is not None) or allow_empty
     if data is None:
         data = []
@@ -119,22 +118,13 @@ def _init_data(data, allow_empty, default_name):
                     "should be NDArray or numpy.ndarray")
 
     return list(data.items())
-```　　
 
 
-而这个方法用于此处：  
----
-
-```python
 class NDArrayIter(DataIter):
     def __init__(self, data, label=None, batch_size=1, shuffle=False, last_batch_handle='pad'):
-        # pylint: disable=W0201
-
         super(NDArrayIter, self).__init__()
-
         self.data = _init_data(data, allow_empty=False, default_name='data')
         self.label = _init_data(label, allow_empty=True, default_name='softmax_label')
-
         # shuffle data
         if shuffle:
             idx = np.arange(self.data[0][1].shape[0])
@@ -186,12 +176,10 @@ class DataBatch(object):
         self.bucket_key = bucket_key
         self.provide_data = provide_data
         self.provide_label = provide_label
-```  
+```   
 
----  
+可以看到，只要赋值给`DataBatch`中参数data,label就可以达到数据迭代的效果，因为每个DataBatch是mxnet中默认的mini-batch数据对象。所以这里有两条路线可以走：　  
 
-可以看到，只要赋值给`DataBatch`中参数data,label就可以达到数据迭代的效果，因为每个DataBatch是mxnet中默认的mini-batch数据对象。所以这里有两条路线可以走：　
-　
 * 自定义自己的数据生成器，可以不断地生成batch_data, batch_label供给DataBatch    
 
 * 重写方法getXXX(),即`getdata`, `getlabel`，使用父类方法`DataIter.next()`默认配置即可。　　
