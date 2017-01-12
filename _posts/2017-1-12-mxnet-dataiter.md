@@ -88,6 +88,7 @@ Parameters:
 * batch_size (batch_size)  
 * shuffle (boolean)  
 * last_batch_handle ('pad', 'discard', 'roll_over')  
+
 上述五个参数，最主要的是前三个，对于data我们可以提供ndarray或者NDArray,结构可以使列表，字典形式。这里为什么可以ist, dict.我们来看源码，在类NDArrayIter中数据初始化时调用了下面方法方法  
 
 
