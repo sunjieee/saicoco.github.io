@@ -1,6 +1,6 @@
-title:            Site Title
-description:      Site description for the metas.
-logo:             omikron.png
+title:            GengJia's Blog
+description:      Fix you
+logo:             timg.jpg
 disqus_shortname: shortname
 # Assign a default image for your site's header and footer
 default_bg:       default_bg.jpg
@@ -15,8 +15,7 @@ animated_fins:    true
 fin_color:        "255,255,255"
 # Change url to your domain. Leave localhost server or blank when working locally.
 # url:          https://saicoco.githuo.io
-baseurl:           
-
+baseurl:           https://saicoco.githuo.io
 # Gems used
 gems:
   - jekyll-feed
@@ -58,7 +57,7 @@ author:
   google_plus:    "http://plus.google.com/123123123123132123"
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:
+google_analytics: 'UA-90273204-1'
 google_verify:
 
 # Links to include in top navigation
