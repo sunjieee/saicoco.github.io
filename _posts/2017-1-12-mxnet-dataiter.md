@@ -192,7 +192,8 @@ class DataBatch(object):
         self.provide_label = provide_label
 ```  
 
----`  
+---  
+
 可以看到，只要赋值给`DataBatch`中参数data,label就可以达到数据迭代的效果，因为每个DataBatch是mxnet中默认的mini-batch数据对象。所以这里有两条路线可以走：　
 　
 1. 自定义自己的数据生成器，可以不断地生成batch_data, batch_label供给DataBatch    
