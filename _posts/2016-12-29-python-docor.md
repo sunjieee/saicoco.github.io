@@ -7,7 +7,6 @@ headerImage: true
 tag: python
 category: mxnet
 blog: true
-star: true
 author: karl
 description: python装饰器
 ---  
