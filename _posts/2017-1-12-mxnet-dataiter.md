@@ -192,9 +192,9 @@ class DataBatch(object):
 
 可以看到，只要赋值给`DataBatch`中参数data,label就可以达到数据迭代的效果，因为每个DataBatch是mxnet中默认的mini-batch数据对象。所以这里有两条路线可以走：　
 　
-1. 自定义自己的数据生成器，可以不断地生成batch_data, batch_label供给DataBatch    
+* 自定义自己的数据生成器，可以不断地生成batch_data, batch_label供给DataBatch    
 
-2. 重写方法getXXX(),即`getdata`, `getlabel`，使用父类方法`DataIter.next()`默认配置即可。　　
+* 重写方法getXXX(),即`getdata`, `getlabel`，使用父类方法`DataIter.next()`默认配置即可。　　
 
 其实两种方法原理皆是为了想DataBatch提供数据，事不过改写不同的地方。不过在coding时需要注意以下几点：　　
 
