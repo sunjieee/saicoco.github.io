@@ -9,12 +9,12 @@ title: Tags
 
     {% if tags_list.first[0] == null %}
         {% for tag in tags_list %}
-    <a class="item" href="#{{ tag | slugify }}">{{ tag }}</sup>{{ tag | last | size }}</sup></a>
+    <a class="item" href="#{{ tag | slugify }}">{{ tag }}(</sup>{{ tag | last | size }}</sup>)</a>
 
         {% endfor %}
     {% else %}
         {% for tag in tags_list %}
-            <a class="item" href="#{{ tag[0] | slugify }}">{{ tag[0] }}</sup>{{ tag | last | size }}</sup></a>
+            <a class="item" href="#{{ tag[0] | slugify }}">{{ tag[0] }}(</sup>{{ tag | last | size }}</sup>)</a>
         {% endfor %}
     {% endif %}
 
