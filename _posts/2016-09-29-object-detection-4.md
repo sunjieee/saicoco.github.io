@@ -2,6 +2,7 @@
 layout: post
 title: 目标检测--Faster RCNN2
 tag: object detection
+category: object_detection
 comments: true
 blog: true
 data: 2016-09-29

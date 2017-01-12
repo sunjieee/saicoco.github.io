@@ -2,6 +2,7 @@
 layout: post
 title: Show, Attend and Tell, Neural Image Caption Generation with Visual Attention
 tag: paper
+category: paper
 comments: true
 blog: true
 data: 2016-10-19

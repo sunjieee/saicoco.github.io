@@ -2,6 +2,7 @@
 layout: post
 title: Visually Indicated Sounds
 tag: paper
+category: paper
 comments: true
 blog: true
 data: 2016-10-24

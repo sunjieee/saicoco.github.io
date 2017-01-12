@@ -3,6 +3,7 @@ layout: post
 title: tensorflow使用笔记(1)--全览
 image: ../downloads/tf/image_header.png
 headerImage: true
+category: tensorflow
 tag: tensorflow
 comments: true
 blog: true

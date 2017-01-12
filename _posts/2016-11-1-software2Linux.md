@@ -2,6 +2,7 @@
 layout: post
 title: 一些好用的ubuntu软件
 tag: ubuntu
+category: software
 comments: true
 blog: true
 data: 2016-11-1

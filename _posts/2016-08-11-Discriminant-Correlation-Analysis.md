@@ -6,6 +6,7 @@ tag:
 - paper
 - CCA
 - multimodal
+category: paper
 comments: true
 blog: true
 ---

@@ -3,6 +3,7 @@ layout: post
 title: 目标检测--非极大值抑制
 tag:
 - object detection
+category: object_detection
 comments: true
 blog: true
 data: 2016-09-04

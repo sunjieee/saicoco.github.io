@@ -5,6 +5,7 @@ date: 2016-12-28
 image: ../downloads/mxnet_register/register.png
 headerImage: true
 tag: python
+category: mxnet
 blog: true
 star: true
 author: karl

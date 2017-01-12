@@ -2,6 +2,7 @@
 layout: post
 title: 利用lmdb制作自己的数据库
 tag: python
+category: caffe
 comments: true
 blog: true
 data: 2016-10-09

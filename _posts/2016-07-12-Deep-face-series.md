@@ -2,6 +2,7 @@
 layout: post
 title: 论文笔记--DeepLearning face Recognition
 tag: paper
+category: paper
 comments: true
 blog: true
 date: 2016-07-12

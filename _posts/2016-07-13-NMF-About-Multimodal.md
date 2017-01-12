@@ -2,6 +2,7 @@
 layout: post
 title: Non-Negative Matrix Factorization
 tag: NMF
+category: paper
 comments: true
 blog: true
 date: 2016-7-13

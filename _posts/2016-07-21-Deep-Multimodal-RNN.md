@@ -6,6 +6,7 @@ tag:
 - paper
 - RNN
 - multimodal
+category: paper
 comments: true
 blog: true
 ---

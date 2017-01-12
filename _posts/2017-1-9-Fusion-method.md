@@ -6,6 +6,7 @@ tag: thinking
 blog: true
 start: true
 author: karl
+category: thinking
 description: 多模态特征融合
 ---    
 

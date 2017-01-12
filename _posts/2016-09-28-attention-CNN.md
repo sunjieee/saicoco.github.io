@@ -4,6 +4,7 @@ title: 论文笔记--Learning Deep Features for Discriminative Localization
 tag:
 - paper
 - attention
+category: paper
 comments: true
 blog: true
 data: 2016-09-28

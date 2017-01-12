@@ -1,0 +1,9 @@
+---
+layout: page
+title: Category
+---
+{% if site.show-category %}
+    {\% for post in site.categories.[page.category] %}
+        {{ post.date }} {{ post.title }}
+    {\% endfor %}
+{% endif %}

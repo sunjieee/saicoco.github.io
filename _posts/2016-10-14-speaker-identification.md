@@ -2,6 +2,7 @@
 layout: post
 title: Speaker Identification的思考
 tag: thinking
+category: thinking
 comments: true
 blog: true
 data: 2016-10-14

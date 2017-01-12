@@ -2,6 +2,7 @@
 layout: post
 title: Python generator 在读取大数据时的应用
 tag: python
+category: python
 comments: true
 blog: true
 date: 2016-07-13

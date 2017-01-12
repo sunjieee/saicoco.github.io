@@ -5,6 +5,7 @@ date: 2017-01-12
 tag: Mxnet
 blog: true
 author: karl
+category: mxnet
 description: 自定义DataIter
 ---   
 
