@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 利用lmdb制作自己的数据库
-tag: python
+tag: caffe
 category: caffe
 comments: true
 blog: true

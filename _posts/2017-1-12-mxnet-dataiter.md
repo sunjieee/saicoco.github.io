@@ -2,7 +2,7 @@
 title: "Mxnet学习笔记(1)--自定义DataIter"
 layout: post
 date: 2017-01-12
-tag: Mxnet
+tag: mxnet
 blog: true
 author: karl
 category: mxnet
