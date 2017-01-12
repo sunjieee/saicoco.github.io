@@ -42,7 +42,7 @@ $$Z_{h_i} = Z_{randh_i} + rands_i \times bottomx_{i}$$
 
 $$complexZ = FFT(b1) \cdot FFT(b2)$$  
 
-然后通过iFFT得到外积的后的值：$$Z = iFFT(complexZ)$$,其中Z为$$(N, num_outputs_, HW)$$。　　
+然后通过iFFT得到外积的后的值：$$Z = iFFT(complexZ)$$,其中Z为(N, num_outputs_, HW)。　　
 
 ----  
 
