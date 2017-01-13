@@ -19,12 +19,12 @@ description: 自定义Op
 
 自定义op都是去继承`operator.py`中的类，其中提供如下几类：　　
 
-> `operator.py`  
-* CustomOp(object)    
-* CustomOpProp(object)  
-* NDArrayOp(PythonOp)  
-* NumpyOp(PythonOp)  
-* PythonOp(object)    
+* `operator.py`  
+	* CustomOp(object)    
+	* CustomOpProp(object)  
+	* NDArrayOp(PythonOp)  
+	* NumpyOp(PythonOp)  
+	* PythonOp(object)    
 
 这里很清晰的可以看出，operator分为两条路线，一条路线为`CustomOp`, 另外一条路线为继承`PythonOp`,这里我们就分为两部分分别介绍这两条路线。　　
 
