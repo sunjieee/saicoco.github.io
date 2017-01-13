@@ -1,5 +1,5 @@
 ---
-title: "Mxnet学习笔记(2)--自定义Op"
+title: "Mxnet学习笔记(3)--自定义Op"
 layout: post
 date: 2017-01-13
 tag: mxnet
