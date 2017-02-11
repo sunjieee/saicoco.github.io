@@ -1,9 +1,31 @@
 ---
+title: About
 layout: page
-title: about
-permalink: /about/
 ---
+![Profile Image]({{ site.url }}/{{ site.myimg }})
 
-Bavaria ipsum dolor sit amet hoid a bissal wos gehd ollaweil nomoi. Wolln mei Weißwiaschd sowos, koa Habedehre schaugn san. Foidweg sog i hoggd Kaiwe, wuid Marterl großherzig ned woar.
+<p>苦苦调参烟酒僧，熟悉炼丹套路以及各类丹炉，至今仍沉迷炼丹不可自拔</p>
 
-Obandln singd Hendl spernzaln i hab an singan dringma aweng Hendl oamoi gwiss Fünferl. Xaver Auffisteign vasteh kumm geh i moan oiwei nia om auf’n Gipfe hoam obandeln.
+<h2>爱好</h2>
+<ul class="skill-list">
+	<li>运动：跑步、篮球、羽毛球</li>
+	<li>电视剧：硅谷，摩登家庭</li>
+</ul>
+
+<h2>经历</h2>
+<ul class="skill-list">
+	<li>2011~2015: 数学与应用数学</li>
+	<li>2015~2018: 计算机应用技术</li>
+	<li>2018~20??: 前途未知</li>
+</ul>
+
+
+<h2>Skills</h2>
+
+<ul class="skill-list">
+	<li>C++</li>
+	<li>python</li>
+	<li>linux</li>
+	<li>caffe, theano, keras, tensorflow .etc</li>
+	<li>CNN, RNN, LSTM</li>
+</ul>
