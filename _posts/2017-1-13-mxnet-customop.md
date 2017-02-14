@@ -74,6 +74,8 @@ class SoftmaxProp(mx.operator.CustomOpProp):
 在`SoftmaxProp`中带有装饰器`mx.operator.register()`,等价于操作`register("custom_op")(CustomOpProp)`,这里即在代码运行前即完成了该Op的
 实例化，与`optimazer`的装饰器类似。　　
 
+这里需要注意，这条路线中数据流是以`mx.nd.NDArray`格式传输的，如果在`forward()`与`backward()`中使用numpy函数，那么可利用`mx.nd.asnumpy()`将数据转换为numpy.ndarray进行操作。
+
 ### PythonOp类　　
 
 这条路线，`PythonOp`类为基类，而我们大多定义Op时不会去继承它，而是使用他的subclass: `NDarrayOp`、`NumpyOp`。这条路线不会像继承`CustomOp`那样需要三步，这里我们也是只讨论如何继承并定义操作，不去探究
@@ -208,9 +210,10 @@ output_blob:['tileop_output']
 在我们定义好Op后，我们需要通过`mx.mod.Moudle()`将Op进行整合，并通过`bind()`来申请内存，在此之后，我们可以通过以下两种方法训练它：　　
 
 * 分别调用`init_params()`初始化参数(当然这里没有参数需要初始化)，`init_optimazer()`初始化optimazer,接下来就可以通过`forward()`和`backward()`进行前向反向传播训练模块。　　
-* 或者直接调用`fit()`方法进行训练，因为`fit()`中包含初始化操作。　　
+* 或者直接调用`fit()`方法进行训练，因为`fit()`中包含初始化操作。　
 
-关于`Moudle`可以参看[`mx.mod.Module`](http://mxnet.io/api/python/module.html)  
+
+关于`Moudle`可以参看[`mx.mod.Module`](http://mxnet.io/api/python/module.html)，当然参看例子也可以看这篇[博客center_loss](https://pangyupo.github.io/2016/10/16/mxnet-center-loss/)
 
 
 
