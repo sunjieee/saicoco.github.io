@@ -138,7 +138,8 @@ class ActivationOp : public Operator {
     Assign(m_in_grad, req[activation::kData], F<BackwardOp>(m_out_data) * m_out_grad);
   }
 };  // class ActivationOp
-```　　
+```
+
 
 对于Forward方法的形参，可以参看文档[operator](http://mxnet.io/doxygen/classmxnet_1_1Operator.html):  
 
@@ -153,9 +154,10 @@ class ActivationOp : public Operator {
 知道上述参数表示什么意思后，我们对代码进行分析，对于Forward()方法，data，out分别表示输入输出数据，Assign表示将`F<ForwardOp>(data)`
 的结果输出到out中，这里`F<ForwardOp>(data)`干了些什么：　　
 
-```c++
-        op = new ActivationOp<cpu, mshadow_op::relu, mshadow_op::relu_grad, DType>();
 
+
+```c++
+op = new ActivationOp<cpu, mshadow_op::relu, mshadow_op::relu_grad, DType>();
 ```  
 
 以上是实例化为relu时的参数情况,可以看到ForwardOp，BackwardOp都来自mashadow_op中，而在mashadow_op中，则是具体的函数：　　
