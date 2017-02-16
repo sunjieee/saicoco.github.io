@@ -1,7 +1,7 @@
 ---
 title: "Mxnet学习笔记(5)--operator源码之Activation"
 layout: post
-date: 2017-02-16
+date: 2017-02-17
 tag: mxnet
 blog: true
 author: karl
