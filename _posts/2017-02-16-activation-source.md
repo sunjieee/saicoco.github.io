@@ -1,5 +1,5 @@
 ---
-title: "Mxnet学习笔记(4)--operator源码之Activation"
+title: "Mxnet学习笔记(5)--operator源码之Activation"
 layout: post
 date: 2017-02-16
 tag: mxnet
