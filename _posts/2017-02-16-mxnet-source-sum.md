@@ -91,6 +91,8 @@ class OperatorProperty{
     
     ...
 
+    static OperatorProperty *Create(const char* type_name);
+
     #define MXNET_REGISTER_OP_PROPERTY(name, OperatorPropertyType)          \
     DMLC_REGISTRY_REGISTER(::mxnet::OperatorPropertyReg, OperatorPropertyReg, name) \
     .set_body([]() { return new OperatorPropertyType(); })                \
@@ -103,5 +105,5 @@ class OperatorProperty{
 由上述代码，可以发现，python operator API与此类似，在上篇文章我们已经说到，在类Operator中定义forward()与backward()方法，
 在OperatorProperty类中定义参数接口，输出参数名字，如方法ListXXX(),在其中定义参数名字(如Arguments中定义输入参数，Outputs中
 定义输出参数名字，AuxiliaryStates中定义辅助变量的名字，而这些在网络运行时可以利用名字或者顺序index获取数值)。同样的，利用Inferhape获取输入和输出的
-shape。在最后成员方法CreateOperatorEx中可以看到调用了成员方法CreateOperator构建operator,然后在最后的注册函数中对operator进行
-注册，完成对operator的定义。
+shape。在最后成员方法CreateOperatorEx中可以看到调用了成员方法CreateOperator构建operator,然后利用工厂函数Create()利用名字创建
+operator,然后在最后的注册函数中对operator进行注册，完成对operator的定义。
