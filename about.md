@@ -2,15 +2,8 @@
 title: About
 layout: page
 ---
-<div class="side-by-side">
-    <div class="toleft">
-        <img class="image" src="https://github.com/saicoco/saicoco.github.io/tree/master/assets/images/me.jpg" alt="Alt Text">
-        <figcaption class="caption">Photo by GengJIA</figcaption>
-    </div>
-    <div class="toright">
-        <p>计算机小硕一枚，爱算法，爱生活</p>
-    </div>
-</div>
+
+![prfile](./assets/me.jpg)
 
 <h2>爱好</h2>
 <ul class="skill-list">
