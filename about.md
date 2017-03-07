@@ -4,7 +4,7 @@ layout: page
 ---
 <div class="side-by-side">
     <div class="toleft">
-        <img class="image" src="{{ site.url}}/{{ site.myimg}}" alt="Alt Text">
+        <img class="image" src="https://github.com/saicoco/saicoco.github.io/tree/master/assets/images/mt.jpg" alt="Alt Text">
         <figcaption class="caption">Photo by GengJIA</figcaption>
     </div>
     <div class="toright">
