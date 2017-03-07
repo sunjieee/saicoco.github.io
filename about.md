@@ -2,7 +2,6 @@
 title: About
 layout: page
 ---
-![Profile Image]({{ site.url }}/{{ site.me }})
 <div class="side-by-side">
     <div class="toleft">
         <img class="image" src="{{ site.url}}/{{ site.myimg}}" alt="Alt Text">
