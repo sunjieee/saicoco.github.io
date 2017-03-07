@@ -28,7 +28,7 @@ analytics-google: 'UA-90273204-1'
 # if you don't want comments in your posts, set to false
 # disqus: saicoco
 duoshuo: saicoco
-weibo: 2286127785
+# weibo: 2286127785
 zhihu: coco-sai
 # if you don't have any of social below, comment the line
 # facebook: geng.jiajia.10
@@ -43,7 +43,7 @@ github: saicoco
 #stackoverflow: 7044681/mystackoverflow
 quora: Jia-Geng
 #reddit: username
-medium: Gengj
+# medium: Gengj
 #vimeo: myvimeo
 email: gjj0816@gmail.com
 
@@ -54,14 +54,14 @@ email: gjj0816@gmail.com
 width: large
 
 # if you don't need pagination, comment the *paginate* configs below
-paginate: 10
+paginate: 5
 paginate_path: "blog/:num/"
 
 # if you don't need projects, comment the *projects* configs below
 projects: true
 
 # if you don't need "about" or "blog", comment them out below
-about: false
+about: true
 blog: true
 Tags: true
 # do you want to show the "read time" of the posts?

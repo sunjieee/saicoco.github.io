@@ -23,9 +23,8 @@ layout: page
 <h2>Skills</h2>
 
 <ul class="skill-list">
-	<li>C++</li>
 	<li>python</li>
 	<li>linux</li>
-	<li>caffe, theano, keras, tensorflow .etc</li>
+	<li>caffe, theano, mxnet, keras, tensorflow .etc</li>
 	<li>CNN, RNN, LSTM</li>
 </ul>
