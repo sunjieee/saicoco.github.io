@@ -2,9 +2,17 @@
 title: About
 layout: page
 ---
-![Profile Image]({{ site.url }}/{{ site.myimg }})
 
-<p>苦苦调参烟酒僧，熟悉炼丹套路以及各类丹炉，至今仍沉迷炼丹不可自拔</p>
+<div class="side-by-side">
+    <div class="toleft">
+        <img class="image" src="./assets/me.jpg" alt="Alt Text">
+        <figcaption class="caption">Photo by GengJIA</figcaption>
+    </div>
+
+    <div class="toright">
+        <p>计算机小硕一枚，爱算法，爱生活</p>
+    </div>
+</div>
 
 <h2>爱好</h2>
 <ul class="skill-list">
