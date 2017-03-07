@@ -9,7 +9,7 @@ description: 烟酒僧的日常
 # better with square images
 external-image: false
 picture: assets/images/me.jpg
-# myimg: assets/images/me.jpg
+myimg: assets/images/me.jpg
 # url: https://koppl.in/indigo
 url: http://saicoco.github.io
 
@@ -77,7 +77,7 @@ related: true
 blog-nav-links: true
 
 # show author block at the end of a post ?
-show-author: false
+show-author: true
 
 # do you want some animations?
 animation: true
