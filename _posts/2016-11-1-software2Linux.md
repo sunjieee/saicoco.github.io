@@ -75,4 +75,10 @@ linux下的qq版本，随着ubuntuKylin的出现,各种支持它的软件都出�
 ![aibizhi](../downloads/software/aibizhi.png)  
 相比于win下的搜狗壁纸，爱壁纸也是一款好用的壁纸软件  
 
-先写到这里，后续再补，估计不会有人看到，如果有问题，可以在[这里](https://github.com/saicoco/saicoco.github.io/issues/9)提交你的建议
+先写到这里，后续再补，估计不会有人看到，如果有问题，可以在[这里](https://github.com/saicoco/saicoco.github.io/issues/9)提交你的建议  
+
+10.[微信](https://github.com/geeeeeeeeek/electronic-wechat),基于electron构建的微信客户端。当然，使用electron构建的app可以解决ubuntu上
+软件缺乏的大问题。　　
+![wechat](https://cloud.githubusercontent.com/assets/7262715/14876747/ff691ade-0d49-11e6-8435-cb1fac91b3c2.png)  
+
+
