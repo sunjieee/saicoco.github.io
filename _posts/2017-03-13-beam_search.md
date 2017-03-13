@@ -1,5 +1,5 @@
 ---
-title: "Mxnet使用中的那些小事--持续更新中"
+title: "Beam Search"
 layout: post
 date: 2017-03-13
 tag: Algorithm
