@@ -1,6 +1,6 @@
 # main text of home
-name: GengJia's Blog
-bio: Fix you
+name: 酱油的罐子
+bio:　五味杂陈，不修边幅
 
 # twitter summary info
 description: 烟酒僧的日常
@@ -8,8 +8,8 @@ description: 烟酒僧的日常
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/me.jpg
-myimg: assets/images/me.jpg
+picture: assets/images/timg.jpg
+myimg: assets/images/timg.jpg
 # url: https://koppl.in/indigo
 url: http://saicoco.github.io
 
