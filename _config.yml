@@ -54,7 +54,7 @@ email: gjj0816@gmail.com
 width: large
 
 # if you don't need pagination, comment the *paginate* configs below
-paginate: 5
+paginate: 7
 paginate_path: "blog/:num/"
 
 # if you don't need projects, comment the *projects* configs below
