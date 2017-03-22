@@ -7,7 +7,7 @@ description: 烟酒僧的日常
 
 # if it's an external image, update below for true
 # better with square images
-external-image: false
+external-image: true
 picture: assets/images/timg.jpg
 myimg: assets/images/timg.jpg
 # url: https://koppl.in/indigo
