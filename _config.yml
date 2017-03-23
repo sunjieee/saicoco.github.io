@@ -8,11 +8,11 @@
 #                                                 /____/        
 #
 # Title of your website
-title: "Milo的ex-Hippocampus"
+title: saicoco的烟酒僧活
 
 
 # The slogan describes your website and is used on homepage in <title> and other important places
-slogan: ""
+slogan: "For free mind"
 
 
 # The description is used on homepage and in the footer to quickly describe your website. Use a maximum of 150 characters for SEO-purposes.
@@ -21,7 +21,7 @@ description: ""
 
 # This URL is the main adresse. Don't include a slash at the end.
 #
-url: "http://miloyip.com"
+url: "https://saicoco.github.io"
 baseurl: ""
 
 # This is for the editing function in _/includes/improve_content.html
