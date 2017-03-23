@@ -16,9 +16,9 @@ data: 2016-11-1
 对于python而言，在linux下简直如鱼得水，而对于集成环境的搭建，即免去自己费尽心思去安装各种基本库，排解各类不兼容问题，游走于stackoverflow的麻烦，推荐新手使用[Ananconda](https://www.continuum.io/downloads)，当然还有别的集成库，如[minconda](http://conda.pydata.org/miniconda.html)。在基本库的安装完毕之后，我们这时需要一款顺手的IDE，当初博主学习python时候由于没人带，走了不少坑，用过[sublime](http://www.sublimetext.com/)，[Atom](https://atom.io/),当然还有最近的[VS code](https://code.visualstudio.com/?utm_expid=101350005-31.YsqwCVJESWmc4UCMDLsNRw.0&utm_referrer=https%3A%2F%2Fcode.visualstudio.com%2F),以上三款均为文本编辑器，并不是正统的IDE,值得一提的是，vscode是一款比较好用的文本编辑器，和sublime差不多。虽说可以配置成类似IDE功能，但是在初期，使用IDE比使用文本编辑器会好一点，后面如果熟练之后使用使可以，因为学习文本编辑器的时间不如用来学习coding。言归正传，说说我用过的IDE.  
 
 #### [Pycharm](https://www.jetbrains.com/pycharm/)  
-![pycharm](../downloads/software/pycharm.png)  　　
+![pycharm]({{site.postimg}}/software/pycharm.png)  　　
 使用效果如下图所示：　　
-![1](../downloads/software/1.png)  
+![1]({{site.postimg}}/software/1.png)  
 让你有个直观的感受，pycharm是一款比较好的IDE,最主要的是社区版简直不要太好用，支持各类插件，支持debug，支持大型项目，github等版本控制系统。比较而言下面这个....  
 
 #### [WingIDE](http://wingware.com/)  
@@ -41,38 +41,38 @@ qtcreator可以说是linux下的c++神器，可以做界面，可以编写各类
 　
 1.[Remarkable](http://remarkableapp.net/),  
 　
-![remark](../downloads/software/remark.png)  
+![remark]({{site.postimg}}/software/remark.png)  
 
 一款好用markdown编辑器支持预览，导出为PDF等一系列好用的功能，同时各种预览主题提供,支持三平台使用(win, linux, mac).  
 
 2.[有道词典](http://cidian.youdao.com/index-linux.html)  
-![youdao](../downloads/software/youdao.png)  
+![youdao]({{site.postimg}}/software/youdao.png)  
 深度出品，必为精品，有点夸张哈，但是在有deepin的存在，使得linux下的一些软件得以开发，使得我们有了一些了windows下的软件可以使用。　　
 
 3.[网易云音乐](http://music.163.com/#/download)  
-![wangyiyun](../downloads/software/wangyiyun.png)  
+![wangyiyun]({{site.postimg}}/software/wangyiyun.png)  
 自从用上了网易云，妈妈总问我为何跪着听音乐。　　
 
 4.[搜狗输入法](http://pinyin.sogou.com/linux/?r=pinyin)  
-![sougou](../downloads/software/sougou.png)  
+![sougou]({{site.postimg}}/software/sougou.png)  
 对于linux下来说，一个好用的输入法简直让人用起来很开心有木有。　　
 
 5.[Texmaker](https://www.baidu.com/link?url=CaF0a2CLIR1SWTft9fImlz5x09n7ujaP-TFsqOP4k7Y8sG3FyWweuyBOscstKj9k&wd=&eqid=a70a513a000438d10000000658186c7a)  
 无需像windows下需要自己下载一大堆集成包，linux下只需要texmaker+texlive就可以随时随地进行编辑latex.  
 
 6.[WPS](http://linux.wps.cn/)  
-![wps](../downloads/software/wps.png)
+![wps]({{site.postimg}}/software/wps.png)
 想必你一直在寻找一款可以代替word, excel的软件，没错，wps值得拥有。　　
 
 7.[wineqq](http://www.qqtn.com/qqkey/wineqq/)    
 linux下的qq版本，随着ubuntuKylin的出现,各种支持它的软件都出现了。　　
 
 8.[steam](http://store.steampowered.com/)    
-![steam](../downloads/software/steam.png)
+![steam]({{site.postimg}}/software/steam.png)
 想必在你累的时候想娱乐一把，steam平台是个好的软件，dota2便是其中的一款游戏，支持linux。　　
 
 9.[爱壁纸](http://www.lovebizhi.com/linux.html)  
-![aibizhi](../downloads/software/aibizhi.png)  
+![aibizhi]({{site.postimg}}/software/aibizhi.png)  
 相比于win下的搜狗壁纸，爱壁纸也是一款好用的壁纸软件  
 
 先写到这里，后续再补，估计不会有人看到，如果有问题，可以在[这里](https://github.com/saicoco/saicoco.github.io/issues/9)提交你的建议  

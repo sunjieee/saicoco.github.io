@@ -2,7 +2,7 @@
 layout: page
 title: tensorflow使用笔记(2)--rnn_cell
 tag: tensorflow
-image: ../downloads/tf/image_header.png
+image: {{site.postimg}}/tf/image_header.png
 headerImage: false
 category: tensorflow
 comments: true
@@ -47,7 +47,7 @@ def output_size(self):
 
 这个cell是最基础的一个RNNCell，可以看做是对一般全连接层的拓展，除了在垂直方向，在水平方向加入时序关系，可以用下图表示：  
 
-![BasicRNNCell](../downloads/tf/RNN-unrolled.png)  
+![BasicRNNCell]({{site.postimg}}/tf/RNN-unrolled.png)  
 
 而BasicRNNCell的初始化方法可如代码所示：  
 
@@ -74,7 +74,7 @@ def __call__(self, inputs, state, scope=None):
 
 GRU是对RNN的一种改进，相比LSTM来说，也可以看做是对LSTM的一种简化，是Bengio在14年提出来的，用作机器翻译。先看一下GRU的基本结构：  
 
-![GRU](../downloads/tf/GRU.png)  
+![GRU]({{site.postimg}}/tf/GRU.png)  
 
 这里我们结合代码来看原理：  
 
@@ -101,7 +101,7 @@ GRUCell的初始化与RNN一样，给出输入和初始化的state，在使用�
 
 这个cell可以看做是最简单的LSTM，在每个连接中没有额外的链接，即其他变种在连接中加入各种改进。对于BasicLSTMCell,可以如下图所示：  
 
-![lstm](../downloads/tf/lstm.png)
+![lstm]({{site.postimg}}/tf/lstm.png)
 
 同样的，我们结合代码来看它的原理：  
 

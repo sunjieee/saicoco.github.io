@@ -1,7 +1,7 @@
 ---
 layout: page
 title: tensorflow使用笔记(1)--全览
-image: ../downloads/tf/image_header.png
+image: {{site.postimg}}/tf/image_header.png
 headerImage: true
 category: tensorflow
 tag: tensorflow
