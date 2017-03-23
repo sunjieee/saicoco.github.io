@@ -35,6 +35,7 @@ improve_content:
 # Markdown-Example for posts ![Image Text]({{ site.urlimg }}/image.jpg)
 #
 urlimg: "images/"
+postimg: "downloads/"
 
 
 # Logo size is 600x80 pixels
@@ -93,7 +94,7 @@ defaults:
       show_meta: true 	# Show metadata beneath all pages
       # sidebar:    		# Possible values › left, right › by default there will be no sidebar
       comments: false
-      author: "your_author_name"
+      author: "JiaGeng"
   -
     scope:
       path: ""        
@@ -102,7 +103,7 @@ defaults:
       show_meta: true   # Show metadata beneath all posts
       # sidebar:        # Possible values › left, right › by default there will be no sidebar
       comments: true
-      author: "your_author_name"
+      author: "JiaGeng"
 
 
 
