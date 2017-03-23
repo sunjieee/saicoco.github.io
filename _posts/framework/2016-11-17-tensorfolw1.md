@@ -3,7 +3,8 @@ layout: page
 title: tensorflow使用笔记(1)--全览
 image: {{site.postimg}}/tf/image_header.png
 headerImage: true
-categories: tensorflow
+categories: 
+    - framework
 tag: tensorflow
 comments: true
 blog: true

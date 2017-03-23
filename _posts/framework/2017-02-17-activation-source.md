@@ -5,7 +5,8 @@ date: 2017-02-17
 tag: mxnet
 blog: true
 author: karl
-categories: mxnet
+categories: 
+  - framework
 description: 自定义Op
 ---  
 

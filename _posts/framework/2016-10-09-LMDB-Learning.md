@@ -2,7 +2,8 @@
 layout: page
 title: 利用lmdb制作自己的数据库
 tag: caffe
-categories: caffe
+categories: 
+    - framework
 comments: true
 blog: true
 data: 2016-10-09

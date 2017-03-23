@@ -4,7 +4,8 @@ title: tensorflow使用笔记(2)--rnn_cell
 tag: tensorflow
 image: {{site.postimg}}/tf/image_header.png
 headerImage: false
-categories: tensorflow
+categories: 
+  - framework
 comments: true
 blog: true
 data: 2016-11-21

@@ -5,7 +5,8 @@ date: 2016-12-28
 image: {{site.postimg}}/mxnet_register/register.png
 headerImage: true
 tag: mxnet
-categories: mxnet
+categories: 
+    - framework
 blog: true
 author: karl
 description: python装饰器
