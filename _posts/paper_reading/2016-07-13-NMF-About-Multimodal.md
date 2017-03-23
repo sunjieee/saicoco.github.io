@@ -2,7 +2,8 @@
 layout: page
 title: Non-Negative Matrix Factorization
 tag: paper
-categories: paper
+categories: 
+    - paper_reading
 comments: true
 blog: true
 date: 2016-7-13

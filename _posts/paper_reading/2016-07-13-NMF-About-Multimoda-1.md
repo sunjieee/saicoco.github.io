@@ -2,7 +2,8 @@
 layout: page
 title: 论文笔记--Multimodal Concept Acquisition with Non-Negative Matrix Factorization
 tag: paper   
-categories: paper
+categories: 
+    - paper_reading
 comments: true
 blog: true
 date: 2016-07-13

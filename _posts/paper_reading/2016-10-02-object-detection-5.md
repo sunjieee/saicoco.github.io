@@ -2,7 +2,8 @@
 layout: page
 title: 目标检测--YOLO
 tag: object detection
-categories: object_detection
+categories: 
+- paper_reading
 comments: true
 blog: true
 data: 2016-10-02

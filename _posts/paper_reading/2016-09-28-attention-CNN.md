@@ -3,7 +3,8 @@ layout: page
 title: 论文笔记--Learning Deep Features for Discriminative Localization
 tag:
 - paper
-categories: paper
+categories: 
+- paper_reading
 comments: true
 blog: true
 data: 2016-09-28
