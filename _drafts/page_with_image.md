@@ -1,21 +1,17 @@
 ---
 layout: page
-#
-# Content
-#
-subheadline: ""
-title: ""
-teaser: ""
+subheadline: 
+title: 
+teaser:
+meta_description:
+permalink:
 categories:
-  - 
+    - 
 tags:
-  - 
-#
-# Styling
-#
+    - 
 image:
-    title:
-    thumb:
+    title: 
+    thumb: 
     homepage:
     caption:
     caption_url:

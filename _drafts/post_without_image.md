@@ -1,16 +1,15 @@
 ---
-layout: page
-#
-# Content
-#
-subheadline: ""
-title: ""
-teaser: ""
+layout: post
+title:
+subheadline:
+meta_description:
+description:
 categories:
-  - 
+    - 
 tags:
-  - 
+    - 
 ---
+
 
 
 

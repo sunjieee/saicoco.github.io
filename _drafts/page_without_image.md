@@ -1,11 +1,8 @@
 ---
 layout: page
-#
-# Content
-#
-subheadline: ""
-title: ""
-teaser: ""
+title:
+subheadline:
+teaser:
 meta_description:
 permalink:
 categories:

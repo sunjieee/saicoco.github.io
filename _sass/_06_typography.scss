@@ -1,7 +1,6 @@
-@charset "utf-8";
-/* TOC – Typography
+/* TOC – Typography 
 
-Check typography variables › _3_typography_settings.scss
+Check typography variables › _3_typography_settings.scss
 
 - Links
 - Customize Foundation Typography
@@ -25,24 +24,22 @@ Check typography variables › _3_typography_settings.scss
 ------------------------------------------------------------------- */
 
 a,
-a:link {
-    transition: all .4s;
-}
+a:link {}
 
 a:visited {
-    border-bottom: $grey-2;
+        border-bottom: $grey-2;
 }
 
 a:hover {
-    color: darken( $ci-1, 10% );
+        color: darken( $ci-1, 10% );
 }
 
 a:focus {
-    color: lighten( $ci-1, 20% );
+        color: lighten( $ci-1, 20% );
 }
 
 a:active {
-    color: darken( $ci-1, 20% );
+        color: darken( $ci-1, 20% );
 }
 
 
@@ -50,18 +47,15 @@ a:active {
 /* Customize Foundation Typography
 ------------------------------------------------------------------- */
 
-p {
+p { 
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
-    -ms-word-break: normal;
-    /* Non standard for webkit */
-    word-break: normal;
 }
 p a,
 article a {
-    font-weight: bold;
+    font-weight: normal;
     border-bottom: 1px dotted;
 }
 p a:hover,
@@ -93,22 +87,22 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: $font-size-h1;
-    margin-top: 0;
+    margin: 0 0 1.25rem 0;
 }
 h2 {
     font-size: $font-size-h2;
-    margin: 1.563em 0 0 0;
+    margin: 2.5rem 0 1.25rem 0;
 }
     .blog-index h2 {
         margin-top: 0;
     }
 h3 {
     font-size: $font-size-h3;
-    margin: 1.152em 0 0 0;
+    margin: 2.5rem 0 1.25rem 0;
 }
 h4 {
     font-size: $font-size-h4;
-    margin: 1.152em 0 0 0;
+    margin: 2.5rem 0 1.25rem 0;
 }
 h5 {
     font-size: $font-size-h5;
@@ -234,39 +228,36 @@ article dl dd   { line-height: 1.6; margin-bottom: rem-calc(12); margin-left: re
 ------------------------------------------------------------------- */
 
 blockquote {
-    font-style: italic;
     position: relative;
     border: none;
     margin: 0 30px 30px 30px;
-    color:  $grey-11;
+    color: #4b4b4d
 }
-
-    blockquote p {font-style: italic; color: $grey-10; }
-
+ 
+    blockquote p {color: $grey-10; }
+ 
     blockquote:before {
         display:block;content:"\00BB";
         font-size:80px;
-        line-height: 0;
         position:absolute;
         left:-25px;
-        top: auto;
-        color: $grey-11;
+        top:-40px;
+        color:#4b4b4d
     }
     blockquote:after {
         display:block;
         content:"\00AB";
         font-size:80px;
-        line-height: 0;
         position:absolute;
         right:-10px;
-        bottom: 20px;
-        color: $grey-11;
+        bottom:-40px;
+        color:#4b4b4d;
     }
     blockquote cite:before {
         content:"\2014 \0020"
     }
     blockquote cite a,blockquote cite a:visited {
-        color: $grey-10;
+        color: #555
     }
 cite {
     padding-top: 5px;
@@ -332,25 +323,12 @@ mark {
 /* Footnotes
 ------------------------------------------------------------------- */
 
-.footnotes:before {
-    content: "";
-    position: absolute;
-    height: 1px;
-    width: 60px;
-    margin-top: -10px;
-    border-bottom: 1px solid $grey-2;
-}
 .footnotes {
     margin-top: 60px;
 }
-.footnotes ol {
+.footnotes ol { 
     font-size: $font-size-small;
 }
-.footnotes p {
-    font-size: inherit;
-    margin-bottom: 0;
-}
-
 
 
 
@@ -390,6 +368,7 @@ mark {
 .icon-cloud:before,
 .icon-code:before,
 .icon-cog:before,
+.icon-douban:before,
 .icon-dropbox:before,
 .icon-edit:before,
 .icon-export:before,
@@ -398,9 +377,9 @@ mark {
 .icon-feather:before,
 .icon-github:before,
 .icon-globe:before,
-.icon-googleplus:before,
 .icon-heart:before,
 .icon-heart-outlined:before,
+.icon-hippocampus:before,
 .icon-home:before,
 .icon-instagram:before,
 .icon-lab-flask:before,
@@ -427,20 +406,22 @@ mark {
 .icon-video:before,
 .icon-vimeo:before,
 .icon-warning:before,
+.icon-weibo:before,
 .icon-xing:before,
-.icon-youtube:before {
+.icon-youtube:before,
+.icon-zhihu:before {
   display: inline-block;
-font-family: "iconfont";
-font-style: normal;
-font-weight: normal;
-font-variant: normal;
-line-height: 1;
-text-decoration: inherit;
-text-rendering: optimizeLegibility;
-text-transform: none;
--moz-osx-font-smoothing: grayscale;
--webkit-font-smoothing: antialiased;
-font-smoothing: antialiased;
+  font-family: "iconfont";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 
 .icon-archive:before { content: "\f100"; }
@@ -459,6 +440,7 @@ font-smoothing: antialiased;
 .icon-cloud:before { content: "\f10c"; }
 .icon-code:before { content: "\f10d"; }
 .icon-cog:before { content: "\f10e"; }
+.icon-douban:before { content: "\f136"; }
 .icon-dropbox:before { content: "\f10f"; }
 .icon-edit:before { content: "\f110"; }
 .icon-export:before { content: "\f111"; }
@@ -467,9 +449,9 @@ font-smoothing: antialiased;
 .icon-feather:before { content: "\f114"; }
 .icon-github:before { content: "\f115"; }
 .icon-globe:before { content: "\f116"; }
-.icon-googleplus:before { content: "\f136"; }
 .icon-heart:before { content: "\f117"; }
 .icon-heart-outlined:before { content: "\f118"; }
+.icon-hippocampus:before { content: "\f139"; }
 .icon-home:before { content: "\f119"; }
 .icon-instagram:before { content: "\f11a"; }
 .icon-lab-flask:before { content: "\f11b"; }
@@ -496,5 +478,7 @@ font-smoothing: antialiased;
 .icon-video:before { content: "\f12f"; }
 .icon-vimeo:before { content: "\f130"; }
 .icon-warning:before { content: "\f131"; }
+.icon-weibo:before { content: "\f137"; }
 .icon-xing:before { content: "\f135"; }
 .icon-youtube:before { content: "\f132"; }
+.icon-zhihu:before { content: "\f138"; }

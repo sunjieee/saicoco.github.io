@@ -1,15 +1,14 @@
 ---
 layout: page-fullwidth
-#
-# Content
-#
-subheadline: ""
-title: ""
-teaser: ""
+subheadline:
+title:
+teaser:
+meta_description:
+permalink:
 categories:
-  - 
+    - 
 tags:
-  - 
+    - 
 ---
 <div class="row">
 <div class="medium-4 medium-push-8 columns" markdown="1">
