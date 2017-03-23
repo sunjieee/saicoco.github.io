@@ -84,7 +84,7 @@ content:" erstellt am: ";
 margin-left: 100%;
 }
 
-item>category:before {
+item>categories:before {
 color: black;
 content:" in Kategorie: ";
 }
