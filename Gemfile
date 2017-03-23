@@ -1,13 +1,13 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
 gem 'jekyll'
-gem 'rake'
-gem 'rouge'
-gem 'html-proofer'
-gem 'jemoji'
-gem 'jekyll-mentions'
-gem 'jekyll-seo-tag'
-gem 'jekyll-feed'
-gem 'jekyll-sitemap'
-gem 'jekyll-gist'
-gem 'jekyll-paginate'
+
+group :jekyll_plugins do
+  gem 'jekyll-gist'
+  gem 'jekyll-paginate'
+  gem "jekyll-asciidoc"
+end
+
+gem 'asciidoctor', '~> 1.5.4'
+gem 'coderay', '1.1.1'
+
