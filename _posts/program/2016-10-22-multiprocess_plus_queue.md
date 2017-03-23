@@ -2,7 +2,8 @@
 layout: page
 title: Python 多线程队列在读取大数据时的应用
 tag: python
-categories: python
+categories: 
+- program
 comments: true
 blog: true
 data: 2016-10-22

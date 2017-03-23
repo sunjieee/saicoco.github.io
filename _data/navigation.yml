@@ -10,9 +10,9 @@
   url: "/graphics/"
   side: left
 
-- title: "杂文"
-  url: "/misc/"
-  side: left
+# - title: "杂文"
+#   url: "/misc/"
+#   side: left
 
 - title: "简历"
   url: "/cv/"
@@ -26,11 +26,19 @@
   url: "/paper_reading/"
   side: left
 
-# - title: "杂文"
-#   url: "/misc/"
-#   side: left
 
-# - title: "杂文"
-#   url: "/misc/"
-#   side: left
+- title: "杂文"
+  url: "/thinking/"
+  side: left
+
+
+- title: "软件小记"
+  url: "/software/"
+  side: left
+
+- title: "projects"
+  url: "/rpojects/"
+  side: right
+
+
 

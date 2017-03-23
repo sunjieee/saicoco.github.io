@@ -2,7 +2,8 @@
 layout: page
 title: 一些好用的ubuntu软件
 tag: ubuntu
-categories: software
+categories: 
+- software
 comments: true
 blog: true
 data: 2016-11-1

@@ -2,7 +2,8 @@
 layout: page
 title: Speaker Identification的思考
 tag: thinking
-categories: thinking
+categories: 
+- thinking
 comments: true
 blog: true
 data: 2016-10-14

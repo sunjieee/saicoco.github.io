@@ -2,7 +2,8 @@
 layout: page
 title: ubuntu安装matlab2015b
 tag: ubuntu
-categories: software
+categories: 
+- software
 comments: true
 blog: true
 data: 2016-11-16

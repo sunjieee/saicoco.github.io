@@ -6,7 +6,8 @@ tag: Algorithm
 blog: true
 star: false
 author: karl
-categories: Algorithm
+categories: 
+- program
 description: beam search
 ---  
 

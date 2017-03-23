@@ -2,7 +2,8 @@
 layout: page
 title: Effective Python metaclass
 tag: python
-categories: python
+categories: 
+- program
 comments: true
 blog: true
 data: 2016-09-21
