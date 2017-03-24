@@ -5,6 +5,11 @@ title: "框架小记"
 subheadline: "DL framework使用小记"
 permalink: "/framework/"
 header:
-   image_fullwidth: "/images/dl.jpg"
+   image_fullwidth: "dl.jpg"
 ---
-{% include list-posts.html category='framework' %}
+<ul>
+    {% for post in site.categories.framework %}
+    <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>
+
