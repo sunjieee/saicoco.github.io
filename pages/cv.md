@@ -4,6 +4,8 @@ show_meta: false
 title: "耿佳 JiaGeng"
 subheadline: "简历"
 permalink: "/cv/"
+header:
+   image_fullwidth: "front021.jpg"
 ---
 
 ## 教育
