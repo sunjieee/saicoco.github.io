@@ -36,6 +36,10 @@
   url: "/software/"
   side: left
 
+- title: "Program"
+  url: "/program/"
+  side: left
+
 - title: "projects"
   url: "/projects/"
   side: right

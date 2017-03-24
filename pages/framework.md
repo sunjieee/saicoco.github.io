@@ -7,9 +7,5 @@ permalink: "/framework/"
 header:
    image_fullwidth: "dl.jpg"
 ---
-<ul>
-    {% for post in site.categories.framework %}
-    <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-</ul>
+{% include list-posts.html category='framework' %}
 

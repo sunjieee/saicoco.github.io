@@ -7,5 +7,4 @@ permalink: "/software/"
 header:
    image_fullwidth: "software.jpg"
 ---
----
 {% include list-posts.html category='software' %}
