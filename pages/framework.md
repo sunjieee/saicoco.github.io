@@ -5,7 +5,7 @@ title: "框架小记"
 subheadline: "DL framework使用小记"
 permalink: "/framework/"
 header:
-   image_fullwidth: "dl.jpg"
+   image_fullwidth: "front01.jpg"
 ---
 {% include list-posts.html category='framework' %}
 
