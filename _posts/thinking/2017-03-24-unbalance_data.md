@@ -2,13 +2,12 @@
 layout: page
 title: "ML处理样本不平衡问题"
 subheadline:
-teaser: Resampling方法和Algorithmic ensemble方法
+teaser: "Resampling方法和Algorithmic ensemble方法"
 meta_description:
-permalink:
 categories:
     - thinking
 tags:
-    - 
+    - machine learning
 ---
 
 [How to handle Imbalanced Classification Problems in machine learning?](https://www.analyticsvidhya.com/blog/2017/03/imbalanced-classification-problem/#comment-125453)  
