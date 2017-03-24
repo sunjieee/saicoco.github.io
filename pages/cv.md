@@ -21,3 +21,6 @@ header:
 | ---- | ---- |
 2018-201x | 暂无
 
+## Papers
+
+[1]: Geng J, Liu X, Cheung Y. Audio-Visual Speaker Recognition via Multi-modal Correlated Neural Networks[C]// Ieee/wic/acm International Conference on Web Intelligence Workshops. IEEE Computer Society, 2016:123-128.
