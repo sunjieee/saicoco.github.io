@@ -6,7 +6,7 @@ teaser: Resampling方法和Algorithmic ensemble方法
 meta_description:
 permalink:
 categories:
-    - thiinking
+    - thinking
 tags:
     - 
 ---
