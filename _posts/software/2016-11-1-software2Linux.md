@@ -82,4 +82,7 @@ linux下的qq版本，随着ubuntuKylin的出现,各种支持它的软件都出�
 软件缺乏的大问题。　　
 ![wechat](https://cloud.githubusercontent.com/assets/7262715/14876747/ff691ade-0d49-11e6-8435-cb1fac91b3c2.png)  
 
+11.[Flowblade](https://github.com/jliljebl/flowblade/)非线性视频编辑软件　　
+
+![flowblade](https://images.imcn.me/wp-content/uploads/2017/03/flowblade_1459-2-750x422.jpg)
 
