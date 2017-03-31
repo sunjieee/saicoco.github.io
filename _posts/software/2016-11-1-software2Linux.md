@@ -40,49 +40,53 @@ qtcreator可以说是linux下的c++神器，可以做界面，可以编写各类
 就日常软件而言，这里我就一一列举  
 
 　
-1.[Remarkable](http://remarkableapp.net/),  
+1. [Remarkable](http://remarkableapp.net/),  
 　
 ![remark](/downloads/software/remark.png)  
 
 一款好用markdown编辑器支持预览，导出为PDF等一系列好用的功能，同时各种预览主题提供,支持三平台使用(win, linux, mac).  
 
-2.[有道词典](http://cidian.youdao.com/index-linux.html)  
+2. [有道词典](http://cidian.youdao.com/index-linux.html)  
 ![youdao](/downloads/software/youdao.png)  
 深度出品，必为精品，有点夸张哈，但是在有deepin的存在，使得linux下的一些软件得以开发，使得我们有了一些了windows下的软件可以使用。　　
 
-3.[网易云音乐](http://music.163.com/#/download)  
+3. [网易云音乐](http://music.163.com/#/download)  
 ![wangyiyun](/downloads/software/wangyiyun.png)  
 自从用上了网易云，妈妈总问我为何跪着听音乐。　　
 
-4.[搜狗输入法](http://pinyin.sogou.com/linux/?r=pinyin)  
+4. [搜狗输入法](http://pinyin.sogou.com/linux/?r=pinyin)  
 ![sougou](/downloads/software/sougou.png)  
 对于linux下来说，一个好用的输入法简直让人用起来很开心有木有。　　
 
-5.[Texmaker](https://www.baidu.com/link?url=CaF0a2CLIR1SWTft9fImlz5x09n7ujaP-TFsqOP4k7Y8sG3FyWweuyBOscstKj9k&wd=&eqid=a70a513a000438d10000000658186c7a)  
+5. [Texmaker](https://www.baidu.com/link?url=CaF0a2CLIR1SWTft9fImlz5x09n7ujaP-TFsqOP4k7Y8sG3FyWweuyBOscstKj9k&wd=&eqid=a70a513a000438d10000000658186c7a)  
 无需像windows下需要自己下载一大堆集成包，linux下只需要texmaker+texlive就可以随时随地进行编辑latex.  
 
-6.[WPS](http://linux.wps.cn/)  
+6. [WPS](http://linux.wps.cn/)  
 ![wps](/downloads/software/wps.png)
 想必你一直在寻找一款可以代替word, excel的软件，没错，wps值得拥有。　　
 
-7.[wineqq](http://www.qqtn.com/qqkey/wineqq/)    
+7. [wineqq](http://www.qqtn.com/qqkey/wineqq/)    
 linux下的qq版本，随着ubuntuKylin的出现,各种支持它的软件都出现了。　　
 
-8.[steam](http://store.steampowered.com/)    
+8. [steam](http://store.steampowered.com/)    
 ![steam](/downloads/software/steam.png)
 想必在你累的时候想娱乐一把，steam平台是个好的软件，dota2便是其中的一款游戏，支持linux。　　
 
-9.[爱壁纸](http://www.lovebizhi.com/linux.html)  
+9. [爱壁纸](http://www.lovebizhi.com/linux.html)  
 ![aibizhi](/downloads/software/aibizhi.png)  
 相比于win下的搜狗壁纸，爱壁纸也是一款好用的壁纸软件  
 
 先写到这里，后续再补，估计不会有人看到，如果有问题，可以在[这里](https://github.com/saicoco/saicoco.github.io/issues/9)提交你的建议  
 
-10.[微信](https://github.com/geeeeeeeeek/electronic-wechat),基于electron构建的微信客户端。当然，使用electron构建的app可以解决ubuntu上
+10. [微信](https://github.com/geeeeeeeeek/electronic-wechat),基于electron构建的微信客户端。当然，使用electron构建的app可以解决ubuntu上
 软件缺乏的大问题。　　
 ![wechat](https://cloud.githubusercontent.com/assets/7262715/14876747/ff691ade-0d49-11e6-8435-cb1fac91b3c2.png)  
 
-11.[Flowblade](https://github.com/jliljebl/flowblade/)非线性视频编辑软件　　
+11. [Flowblade](https://github.com/jliljebl/flowblade/)非线性视频编辑软件　　
 
 ![flowblade](https://images.imcn.me/wp-content/uploads/2017/03/flowblade_1459-2-750x422.jpg)
+
+12. Apvlv, VIM命令版本的PDF阅读器　　
+
+13. [GeoGebra](https://www.geogebra.org/), 教学数学绘图软件　　
 
