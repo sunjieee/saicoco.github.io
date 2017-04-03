@@ -8,6 +8,8 @@ categories:
 comments: true
 blog: true
 data: 2016-09-04
+header:
+   image_fullwidth: "paper.jpg"
 ---
 
 今天开始私下里偷偷学习目标检测,当然先从[fast-rcnn](https://github.com/rbgirshick/fast-rcnn)入手了, 在看论文的过程中发现了非极大值抑制(NMS)

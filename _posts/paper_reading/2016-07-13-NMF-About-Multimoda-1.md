@@ -7,6 +7,8 @@ categories:
 comments: true
 blog: true
 date: 2016-07-13
+header:
+   image_fullwidth: "paper.jpg"
 ---
 
 本文主要介绍非负矩阵(NMF)分解在cross-modal task上的应用，简称MCA-NMF[^1][^2]。对于来自不同传感器或接收器的数据，可以获取其之间联系

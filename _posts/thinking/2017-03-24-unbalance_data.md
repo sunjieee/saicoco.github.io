@@ -7,6 +7,8 @@ categories:
 comments: true
 blog: true
 data: 2017-03-24
+header:
+   image_fullwidth: "thinking.jpg"
 ---  
 
 [How to handle Imbalanced Classification Problems in machine learning?](https://www.analyticsvidhya.com/blog/2017/03/imbalanced-classification-problem/#comment-125453)  

@@ -7,6 +7,8 @@ categories:
 comments: true
 blog: true
 date: 2016-07-12
+header:
+   image_fullwidth: "paper.jpg"
 ---
 这篇博客主要简单总结下deepLearning在人脸识别方面取得的进展，deepface[^1]，deepid[^2]，facenet[^3]是三个代表工作，由此揭开了deeplearning在人脸识别领域的篇章.
 

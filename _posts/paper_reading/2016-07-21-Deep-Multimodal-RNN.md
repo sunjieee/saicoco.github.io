@@ -7,6 +7,8 @@ categories:
   - paper_reading
 comments: true
 blog: true
+header:
+   image_fullwidth: "paper.jpg"
 ---
 文章[^1]主要完成对于图像生成其内容描述，[项目主页](http://www.stat.ucla.edu/~junhua.mao/m-RNN.html),任务描述如下图所示：　　
 

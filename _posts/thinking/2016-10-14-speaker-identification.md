@@ -7,6 +7,8 @@ categories:
 comments: true
 blog: true
 data: 2016-10-14
+header:
+   image_fullwidth: "thinking.jpg"
 ---  
 
 ### 写在前面的话　　

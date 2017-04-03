@@ -7,6 +7,8 @@ categories:
 comments: true
 blog: true
 data: 2016-09-29
+header:
+   image_fullwidth: "paper.jpg"
 ---
 ### 写在前面的话　　
 

@@ -7,6 +7,8 @@ categories:
 comments: true
 blog: true
 date: 2016-7-13
+header:
+   image_fullwidth: "paper.jpg"
 ---
 
 本文主要介绍非负矩阵(NMF)分解,文章行文如下：

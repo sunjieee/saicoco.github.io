@@ -7,6 +7,8 @@ categories:
 comments: true
 blog: true
 data: 2016-09-07
+header:
+   image_fullwidth: "paper.jpg"
 ---
 ### 配置小插曲
 

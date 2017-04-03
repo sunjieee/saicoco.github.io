@@ -7,6 +7,8 @@ categories:
 comments: true
 blog: true
 data: 2016-10-24
+header:
+   image_fullwidth: "paper.jpg"
 ---  
 
 不同物体被打击或者刮的时候会发出不同的声音，而且具有一定的区分性，而且对于人来说，当我们看一步无声电影，其中比如敲击鼓，刮玻璃

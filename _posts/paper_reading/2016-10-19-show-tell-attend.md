@@ -7,6 +7,8 @@ categories:
 comments: true
 blog: true
 data: 2016-10-19
+header:
+   image_fullwidth: "paper.jpg"
 ---  
 
 最近终于入了attention机制的坑了，为什么呢，因为在object detection和各种VQA, 图像生成描述里面，都有这个东西，路子必须广~. 文章[^1]

@@ -9,6 +9,8 @@ author: karl
 categories: 
 - thinking
 description: 多模态特征融合
+header:
+   image_fullwidth: "thinking.jpg"
 ---    
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>

@@ -7,6 +7,8 @@ categories:
 comments: true
 blog: true
 data: 2016-11-16
+header:
+   image_fullwidth: "software.jpg"
 ---    
 因为matlab代码需要在ubuntu15.10下运行，因此需要安装matlab，刚好在别的群里边溜达的时候遇到一些人的分享，我保存在[百度云盘](https://pan.baidu.com/s/1kUCe2R9)了,安装过程还算顺利，这里小记一下，因为还是遇到一些小问题，之前遇到然后知难而退了，话不多说，开始步骤。  
 
