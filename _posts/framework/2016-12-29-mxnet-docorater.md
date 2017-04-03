@@ -10,6 +10,8 @@ categories:
 blog: true
 author: karl
 description: python装饰器
+header:
+   image_fullwidth: "dl.png"
 ---  
 
 今天趁着跑实验的间隙跑去阅读mxnet源码，看到了这么一段代码：　　

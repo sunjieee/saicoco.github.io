@@ -8,6 +8,8 @@ author: karl
 categories: 
   - framework
 description: 自定义Op
+header:
+   image_fullwidth: "dl.png"
 ---  
 
 上篇说道operator.h，接着我们说NN中最为常见的操作Activation，就着激活函数我们分析一个operator的

@@ -8,6 +8,8 @@ author: karl
 categories: 
     - framework
 description: 自定义Op
+header:
+   image_fullwidth: "dl.png"
 ---  
 
 过完年了，新的开始，计划给自己分配点任务:计划将mxnet中的c++源码读一遍，全当学习一遍c++。大致分为以下几个模块

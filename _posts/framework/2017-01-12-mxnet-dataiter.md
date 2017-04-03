@@ -8,6 +8,8 @@ author: karl
 categories: 
     - framework
 description: 自定义DataIter
+header:
+   image_fullwidth: "dl.png"
 ---   
 
 ## 前言　　

@@ -8,6 +8,8 @@ categories:
   - framework
 comments: true
 blog: true
+header:
+   image_fullwidth: "dl.png"
 data: 2016-11-21
 ---  
 
