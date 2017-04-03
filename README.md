@@ -1,4 +1,8 @@
-### 烟酒僧的日常　　
+# Blog theme
+
+![image](/images/blog.png)
+
+### GengJ's Blog　　
 
 主要记录以下内容：　　
 
