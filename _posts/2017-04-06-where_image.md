@@ -50,7 +50,9 @@ seq2seq模型，输入为word vectors,输出为word vector后移一个单词，�
 ![init1](../downloads/whereimg/init/1.png)  
 
 抛去优化算法，损失函数的设计，我们这里只看模型结构，image来自CNN最后一层特征，直接作为RNN的隐藏层初始
-值，图中绿色点表示句子起始标志，褐色节点表示句子结尾标志，$P(g_i)$表示预测函数．典型的init-inject model.
+值，图中绿色点表示句子起始标志，褐色节点表示句子结尾标志，$P(g_i)$表示预测函数．典型的init-inject model.  
+
+同样的，之前博客写过记过的[m-rnn]()
 ### Pre-inject  
 Pre-inject则将image作为RNN的第一个输入，可以将其视为第一个单词，隐藏层初始状态为随机初始化．　　
 
