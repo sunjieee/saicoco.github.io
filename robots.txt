@@ -1,7 +1,3 @@
----
----
-# www.robotstxt.org/
-# www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449
-
+# Allow crawling of all content
 User-agent: *
-Sitemap: {{ site.url }}/sitemap.xml
+Disallow:

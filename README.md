@@ -1,15 +1,30 @@
-# Blog theme
+# Moon Jekyll Theme [![Donate](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.me/taylantatli/0usd)  
+  
+## `Sorry guys but there will be no update until I buy a new laptop.`
+    
+######(If you like this theme or using it, please give a :star: for motivation.)
 
-![image](/images/blog.png)
+**[Moon](https://taylantatli.github.io/Moon)** is a minimal, one column jekyll theme.
 
-### GengJ's Blog　　
+## Features
+* Minimal, you can focus on your content
+* Responsive
+* Disqus integration
+* Syntax highlighting
+* Optional post image
+* Social icons
+* Page for sharing projects
+* Optional background image
+* Simple navigation menu
+* MathJax support
 
-主要记录以下内容：　　
+## Preview
 
-* 论文阅读笔记　　
-* 代码阅读笔记　　
-* 日常想法　　
-* 读书的感想　　
-* 日常话唠　　
+![screenshot of Moon](https://cloud.githubusercontent.com/assets/754514/14509720/61c61058-01d6-11e6-93ab-0918515ecd56.png)    
+![screenshot of Moon](https://cloud.githubusercontent.com/assets/754514/14509716/61ac6c8e-01d6-11e6-879f-8308883de790.png)
 
-而一些网站链接、数据集等收藏在项目wiki里面，而一些日常小想法、计划安排在issue,作为时常更新的笔记本。
+See a [live version of Moon](https://taylantatli.github.io/Moon) hosted on GitHub.
+
+## Getting Started
+
+To learn how to install and use this theme check out the [Setup Guide](https://taylantatli.github.io/Moon/moon-theme/) for more information.
