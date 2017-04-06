@@ -45,6 +45,12 @@ description: image_caption
 init-inject顾名思义，也如同上图所示，这里利用image作为RNN隐藏层向量的初始值，即初始`h_state = image`,而对于输入，则如同一般
 seq2seq模型，输入为word vectors,输出为word vector后移一个单词，直到预测到<END>标志为止．　　
 
+如文章[^2]，文章创新之处在于利用Policy Gradient优化模型，可以算第一篇将强化学习应用于image caotion的文章．文章模型结构如下图所示：  
+
+![init1](../downloads/whereimg/init/1.png)  
+
+抛去优化算法，损失函数的设计，我们这里只看模型结构，image来自CNN最后一层特征，直接作为RNN的隐藏层初始
+值，图中绿色点表示句子起始标志，褐色节点表示句子结尾标志，$P(g_i)$表示预测函数．典型的init-inject model.
 ### Pre-inject  
 Pre-inject则将image作为RNN的第一个输入，可以将其视为第一个单词，隐藏层初始状态为随机初始化．　　
 
@@ -61,4 +67,5 @@ Post-inject则是将image作为最后一个单词输入RNN中．
 
 ## Reference  
 
-[^1]: Marc Tanti, Albert Gatt, Kenneth P. Camilleri. Where to put the Image in an Image Caption Generator[J]. 2017.
+[^1]: Marc Tanti, Albert Gatt, Kenneth P. Camilleri. Where to put the Image in an Image Caption Generator[J]. 2017.  
+[^2]: Improved Image Captioning via Policy Gradient optimization of SPIDEr
