@@ -34,7 +34,7 @@ description: image_caption
 与image的混合encode,而merging更倾向于单独对word编码，然后利用word高层表示与image进行＂融合＂．简而言之，如果image对于RNN encode
 过程有作用，那么可以将其与word一起encode,反之，进行merging.　　
 
-## Init，Pre，Par，Post  
+## Injecting 
 对于inject,主要在于word与image的组织形式，而这其中基本就是近几年image caption中论文的各种创新点．主要组织形式如下图所示：　　
 
 ![2](../downloads/whereimg/2.png)  
