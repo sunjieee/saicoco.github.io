@@ -1,5 +1,5 @@
 ---
-title: Where to put the Image in an Image Caption Generator
+title: image caption中image feature的位置
 layout: page
 date: 2017-04-06
 categories: 
