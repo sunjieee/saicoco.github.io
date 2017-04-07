@@ -147,6 +147,8 @@ tricks,所以不足以说明image的位置对于最后结果的影响，因此�
 * pre  
 * par  
 * post  
+
+
 以上为两种对比的内部组合方式，而对于特征，image特征使用vgg最后一层fc层特征，未使用多层特征组合的方式;word特征使用word embedding层获取word 
 vector,但是没有使用glove等训练好的词向量，而是直接嵌入到模型中，使得embedding layer可以学习到有用的词向量映射．以下为训练配置：　　
 
