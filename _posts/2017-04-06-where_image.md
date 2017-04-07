@@ -9,6 +9,7 @@ blog: true
 start: false
 author: karl
 description: image_caption
+feature: ../downloads/whereimg/feature.jpg
 --- 
 
 在image caption这个任务中，需要输入两种特征：image, word_vector,本文就两种特征融合的位置作讨论，同时也是阅读文章[^1]之后记录一下．  
