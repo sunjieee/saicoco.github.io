@@ -155,7 +155,7 @@ vector,但是没有使用glove等训练好的词向量，而是直接嵌入到�
 
 ![duibi](../downloads/whereimg/config.png)   
 
-这里使用数据集为Karpathy的数据集flickr30k(http://cs.stanford.edu/people/karpathy/deepimagesent/)，当然也有coco等提取好的数据．训练过程如下：　　
+这里使用数据集为Karpathy的数据集[flickr30k](http://cs.stanford.edu/people/karpathy/deepimagesent/)，当然也有coco等提取好的数据．训练过程如下：　　
 ![duibi](../downloads/whereimg/5.png)  
 prefix表示当前输入caption,target为caption后移一个词得到，数据组合形式及一张图片配一个词，这样利于后续的inject中pair的实现．下面为对image 位置的结果的总结：　　
 > If we take the late binding architectures, merge and post-inject, and the early binding architectures, init-inject and pre-inject, as two groups, then there is a clearly discernible pattern for both the models using a simple RNN and those using an LSTM: given the same RNN type, late binding architectures perform better than early binding architectures with mixed binding architectures (parinject) floating somewhere in the middle.  
