@@ -104,24 +104,29 @@ Yao et al.[^9]则是提出了image与word的组合关系，提出的模型可以
 上图中，image和attribute分别指来自pre-train模型的fc feature和该特征对应的概率．图中给出五种组合方式，成为boosting.  
 
 
-
-
-
-
-
-
-
-
-
 ### Par-inject  
 Par-inject可以理解为pair-inject,及每次输入一个词时需要同时输入image,RNN每次接受两个向量．　　
 
-### Post-inject  
-Post-inject则是将image作为最后一个单词输入RNN中．
+Donahue et al.[^10]提出的模型如下图所示：　　
+![yao](../downloads/whereimg/par/1.png)   
+模型接受image, word组合输入，然后预测word,而且同时还提出了视频caption的生成模型．  
+
+Karpathy et al.[^12]提出的对齐模型，　　
+![yao](../downloads/whereimg/par/feifei.png)   
+利用目标检测算法检测图片中目标内容，使得caption与目标对齐，而目标与word的融合方式如上图所示．　　
+
+Sah et al.[^14]提出模型如下图所示：　　
+![yao](../downloads/whereimg/par/2.png)   
+换汤不换药，模型结构类似，不同之处也是image feature的获取，这里获取的时序特征，结合word，最后旨在获取word与Image的时序关联．　　
+
+Zhou et al.[^13]则是提出如下模型：　　
+![zhou](../downloads/whereimg/par/3.png)  
+如上图右边所示，在image feature的输入之前加入word的信息，这样得到的Image feature偏向文本，使得最后的decode阶段得到的word更为准确．
+
+同样的xu[^2]在每次lstm过程中都输入了attention vector,可以是一种par-inject,可以参看上面公式，还有Yao[^9]几种boosting结构，都存在par-inject.
 
 
-
-
+## Merging  
 
 
 ## Reference  
@@ -135,6 +140,9 @@ Post-inject则是将image作为最后一个单词输入RNN中．
 [^6]: Rennie S J, Marcheret E, Mroueh Y, et al. Self-critical Sequence Training for Image Captioning[J]. 2016.　　
 [^7]: Vinyals O, Toshev A, Bengio S, et al. Show and tell: A neural image caption generator[J]. Computer Science, 2015:3156-3164.  
 [^8]: Wu Q, Shen C, Hengel A V D, et al. Image Captioning with an Intermediate Attributes Layer[J]. Computer Science, 2015.  
-[^9]: Yao T, Pan Y, Li Y, et al. Boosting Image Captioning with Attributes[J]. 2016.  
-[^10]: Chen X, Zitnick C L. Mind's eye: A recurrent visual representation for image caption generation[J]. 2015:2422-2431.  
-[^11]: Donahue J, Hendricks L A, Guadarrama S, et al. Long-term recurrent convolutional networks for visual recognition and description[C]// Computer Vision and Pattern Recognition. IEEE, 2015:2625-2634.
+[^9]: Yao T, Pan Y, Li Y, et al. Boosting Image Captioning with Attributes[J]. 2016.   
+[^10]: Donahue J, Hendricks L A, Guadarrama S, et al. Long-term recurrent convolutional networks for visual recognition and description[C]// Computer Vision and Pattern Recognition. IEEE, 2015:2625-2634.　　
+[^11]: Hessel J, Savva N, Wilber M J. Image Representations and New Domains in Neural Image Captioning[J]. Computer Science, 2015.  
+[^12]: Karpathy A, Fei-Fei L. Deep Visual-Semantic Alignments for Generating Image Descriptions[J]. IEEE Transactions on Pattern Analysis & Machine Intelligence, 2015, 39(4):664.  
+[^13]: Zhou L, Xu C, Koch P, et al. Image Caption Generation with Text-Conditional Semantic Attention[J]. 2016.  
+[^14]: Oruganti R M, Sah S, Pillai S, et al. Image description through fusion based recurrent multi-modal learning[C]// IEEE International Conference on Image Processing. IEEE, 2016:3613-3617.
