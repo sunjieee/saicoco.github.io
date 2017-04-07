@@ -32,7 +32,9 @@ description: image_caption
 
 这里需要说明，word为word_embedding vector,image为从pre-train模型最后一层fc层提取的特征，由上图可以看到，injecting更专注于word
 与image的混合encode,而merging更倾向于单独对word编码，然后利用word高层表示与image进行＂融合＂．简而言之，如果image对于RNN encode
-过程有作用，那么可以将其与word一起encode,反之，进行merging.　　
+过程有作用，那么可以将其与word一起encode,反之，进行merging.关于merging,多为结合injecting来做，目的在于获取局部特征与全局特征，使得
+最后用于预测的特征更为丰富，得到更准确的结果，因此这里只对injecting做简要描述．　　
+　
 
 ## Injecting 
 对于inject,主要在于word与image的组织形式，而这其中基本就是近几年image caption中论文的各种创新点．主要组织形式如下图所示：　　
@@ -124,10 +126,40 @@ Zhou et al.[^13]则是提出如下模型：　　
 如上图右边所示，在image feature的输入之前加入word的信息，这样得到的Image feature偏向文本，使得最后的decode阶段得到的word更为准确．
 
 同样的xu[^2]在每次lstm过程中都输入了attention vector,可以是一种par-inject,可以参看上面公式，还有Yao[^9]几种boosting结构，都存在par-inject.
+ 
+----  
+## where to put image  
+在描述一些经典结构之后，文章将各路算法综合做了对比，并设计了对比试验，其框架如下图所示：　　
 
+![duibi](../downloads/whereimg/4.png)  
 
-## Merging  
+所有的结构参数相同，唯一不同的在于image插入的位置．如此做的原因在于，以往模型之间的对比往往不会使用完全相同的结构，而且有的模型相当多的
+tricks,所以不足以说明image的位置对于最后结果的影响，因此文章控制无关变量，使用相同设置进行试验．　　
+对于merge使用三种哦个方式:  
+* add  
+* mul  
+* concat  
 
+对于inject则使用：　　
+* init  
+* pre  
+* par  
+* post  
+以上为两种对比的内部组合方式，而对于特征，image特征使用vgg最后一层fc层特征，未使用多层特征组合的方式;word特征使用word embedding层获取word 
+vector,但是没有使用glove等训练好的词向量，而是直接嵌入到模型中，使得embedding layer可以学习到有用的词向量映射．以下为训练配置：　　
+
+![duibi](../downloads/whereimg/config.png)   
+
+这里使用数据集为Karpathy的数据集flickr30k(http://cs.stanford.edu/people/karpathy/deepimagesent/)，当然也有coco等提取好的数据．训练过程如下：　　
+![duibi](../downloads/whereimg/5.png)  
+prefix表示当前输入caption,target为caption后移一个词得到，数据组合形式及一张图片配一个词，这样利于后续的inject中pair的实现．下面为对image 位置的结果的总结：　　
+> If we take the late binding architectures, merge and post-inject, and the early binding architectures, init-inject and pre-inject, as two groups, then there is a clearly discernible pattern for both the models using a simple RNN and those using an LSTM: given the same RNN type, late binding architectures perform better than early binding architectures with mixed binding architectures (parinject) floating somewhere in the middle.  
+经实验文章得出结论Image位置靠后对结果提升有好处，即merging比inecting会好一些：　　
+
+> Our conclusion, however, must be that models in which image features are included early in the generation process perform poorly, relative to those models based on injecting or merging image features later.  
+
+对于image与word混合输入RNN,对于RNN最后的编码并不是最佳，因为image中的噪声可能影响学习过程，而这也是NIC模型使用pre-injecting的理由，认为par-injecting方式会不断的将图片信息混入RNN中，影响最后的结果．而从inject中的模型可以看出，不论是目标检测获取Image Feature,还是使用多层图像
+特征混合作为最后的图像特征，或是使用SVM微调网络，目的都在于丢弃噪声，使用更为有效的图像特征，而这也是避免图像对RNN学习影响的手段，而对于word部分，基本都是encoder-to-decoder．而这可能就是merging对于最终结果有利的原因，没有参与word的编码过程，只是在语义层进行影响最终的word预测．Image caption的任务难点：word与Image feature的交互，最后语言的生成．解决这两个问题的方式，就是提出上述模型的思维过程．
 
 ## Reference  
 
@@ -145,4 +177,5 @@ Zhou et al.[^13]则是提出如下模型：　　
 [^11]: Hessel J, Savva N, Wilber M J. Image Representations and New Domains in Neural Image Captioning[J]. Computer Science, 2015.  
 [^12]: Karpathy A, Fei-Fei L. Deep Visual-Semantic Alignments for Generating Image Descriptions[J]. IEEE Transactions on Pattern Analysis & Machine Intelligence, 2015, 39(4):664.  
 [^13]: Zhou L, Xu C, Koch P, et al. Image Caption Generation with Text-Conditional Semantic Attention[J]. 2016.  
-[^14]: Oruganti R M, Sah S, Pillai S, et al. Image description through fusion based recurrent multi-modal learning[C]// IEEE International Conference on Image Processing. IEEE, 2016:3613-3617.
+[^14]: Oruganti R M, Sah S, Pillai S, et al. Image description through fusion based recurrent multi-modal learning[C]// IEEE International Conference on Image Processing. IEEE, 2016:3613-3617.  
+[^15]: Donahue J, Hendricks L A, Rohrbach M, et al. Long-term Recurrent Convolutional Networks for Visual Recognition and Description[J]. IEEE Trans Pattern Anal Mach Intell. 2016, PP(99):2625-2634.
