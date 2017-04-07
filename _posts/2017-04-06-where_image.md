@@ -88,7 +88,26 @@ Rennie et al[^6]同样使用image feature作为RNN的第一个输入，一图胜
 
 Vinyals et al.[^7]就是我们常说的google NIC模型，该模型也是将image feature插入至word第一个向量:  
 ![nic](../downloads/project/image_caption/nic.png)  
-很直观，这篇文章算很典型的一个模型，引用率蛮高．　　
+很直观，这篇文章算很典型的一个模型，引用率蛮高．实现也较为简单．　　
+
+Wu et al.[^8]则发现，上述模型image feature通过pre-train的模型提取，不具有针对性，即提取的特征与分类相关，未必适合caption任务，模型
+结构图如下图所示：　　
+
+![wu](../downloads/whereimg/pre/3.png)  
+
+首先利用caotion中的关键词，比如dog, car等这些word中的关键词作为类别信息，fine-tune模型，好处在于这样提取出的image feature与关键词是紧密相关的，还有一处创新点，就是在fine-tune过程中，作者将这个过程视为one-vs-all,没有使用softmax分类器，而是使用svm, 文章说道，caption中出现的关键词，即类别他们之间没有非此及彼的关系，比如这句话：＂一只狗蹲在车旁边＂，这里狗和车是可以同时出现的，并且不会因为狗的概率增加而压缩车出现的概率，所以选择SVM分类器，如此一来，对caption更具有针对性，而且其LSTM的第一个输入为image feature,做法与NIC相同.  　　
+
+Yao et al.[^9]则是提出了image与word的组合关系，提出的模型可以覆盖inject的后面三种情况：pre, par, post:  
+
+![yao](../downloads/whereimg/pre/4.png)  
+
+上图中，image和attribute分别指来自pre-train模型的fc feature和该特征对应的概率．图中给出五种组合方式，成为boosting.  
+
+
+
+
+
+
 
 
 
@@ -114,4 +133,8 @@ Post-inject则是将image作为最后一个单词输入RNN中．
 [^4]: Wang M, Song L, Yang X, et al. A parallel-fusion RNN-LSTM architecture for image caption generation[C]// IEEE International Conference on Image Processing. IEEE, 2016.　　
 [^5]: Krause J, Johnson J, Krishna R, et al. A Hierarchical Approach for Generating Descriptive Image Paragraphs[J]. 2016.  
 [^6]: Rennie S J, Marcheret E, Mroueh Y, et al. Self-critical Sequence Training for Image Captioning[J]. 2016.　　
-[^7]: Vinyals O, Toshev A, Bengio S, et al. Show and tell: A neural image caption generator[J]. Computer Science, 2015:3156-3164.
+[^7]: Vinyals O, Toshev A, Bengio S, et al. Show and tell: A neural image caption generator[J]. Computer Science, 2015:3156-3164.  
+[^8]: Wu Q, Shen C, Hengel A V D, et al. Image Captioning with an Intermediate Attributes Layer[J]. Computer Science, 2015.  
+[^9]: Yao T, Pan Y, Li Y, et al. Boosting Image Captioning with Attributes[J]. 2016.  
+[^10]: Chen X, Zitnick C L. Mind's eye: A recurrent visual representation for image caption generation[J]. 2015:2422-2431.  
+[^11]: Donahue J, Hendricks L A, Guadarrama S, et al. Long-term recurrent convolutional networks for visual recognition and description[C]// Computer Vision and Pattern Recognition. IEEE, 2015:2625-2634.
