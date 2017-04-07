@@ -45,14 +45,34 @@ description: image_caption
 init-inject顾名思义，也如同上图所示，这里利用image作为RNN隐藏层向量的初始值，即初始`h_state = image`,而对于输入，则如同一般
 seq2seq模型，输入为word vectors,输出为word vector后移一个单词，直到预测到<END>标志为止．　　
 
-如文章[^2]，文章创新之处在于利用Policy Gradient优化模型，可以算第一篇将强化学习应用于image caotion的文章．文章模型结构如下图所示：  
+如liu et al.[^2]，文章创新之处在于利用Policy Gradient优化模型，可以算第一篇将强化学习应用于image caotion的文章．文章模型结构如下图所示：  
 
 ![init1](../downloads/whereimg/init/1.png)  
 
 抛去优化算法，损失函数的设计，我们这里只看模型结构，image来自CNN最后一层特征，直接作为RNN的隐藏层初始
-值，图中绿色点表示句子起始标志，褐色节点表示句子结尾标志，$P(g_i)$表示预测函数．典型的init-inject model.  
+值，图中绿色点表示句子起始标志，褐色节点表示句子结尾标志，$$P(g_i)$$表示预测函数．典型的init-inject model.  
 
-同样的，之前博客写过记过的[m-rnn]()
+同样的，xu et al.[^3]结构类似，使用LSTM作为编码工具，不同之处在于模型中加入attention机制，对于LSTM,可以如下面式子表示:  
+
+![init2](../downloads/whereimg/init/2.png)  
+
+如文中描述，$$z$$表示上下文的向量，来自原始图像中标注位置得到的注意力向量，而文中还提到，  
+> The initial memory state and hidden state of the LSTM are predicted by an average of the annotation vectors fed through two separate MLPs (init,c and init,h):  
+$$
+\begin{equation}
+c_0 = f_{init, c}(\frac{1}{L} \sum_{i}^{L}\alpha_i)
+h_0 = f_{init, h}(\frac{1}{L} \sum_{i}^{L}\alpha_i)
+\end{equation}
+$$  
+有上面式子可以知道，对于lstm的初始化隐藏层向量，都是用图像特征初始化的(经过fc层endoce使得维度与word相同)．而其网络结构可以如下图表示，虽然细节只能从公式中观察．　　
+
+![init2](../downloads/whereimg/init/3.png)    
+
+而Yang et al.[^4]使用同样的方法初始化RNN$$h$$向量，如下图所示：  
+
+![init2](../downloads/whereimg/init/4.png)  
+不同之处在于其使用两个并行的RNN对word进行encode,然后在decode阶段将两个RNN进行fusion.
+
 ### Pre-inject  
 Pre-inject则将image作为RNN的第一个输入，可以将其视为第一个单词，隐藏层初始状态为随机初始化．　　
 
@@ -70,4 +90,7 @@ Post-inject则是将image作为最后一个单词输入RNN中．
 ## Reference  
 
 [^1]: Marc Tanti, Albert Gatt, Kenneth P. Camilleri. Where to put the Image in an Image Caption Generator[J]. 2017.  
-[^2]: Improved Image Captioning via Policy Gradient optimization of SPIDEr
+[^2]: Liu S, Zhu Z, Ye N, et al. Optimization of image description metrics using policy gradient methods[J]. 2016.  
+
+[^3]: Xu K, Ba J, Kiros R, et al. Show, Attend and Tell: Neural Image Caption Generation with Visual Attention[J]. Computer Science, 2015:2048-2057.  
+[^4]: Wang M, Song L, Yang X, et al. A parallel-fusion RNN-LSTM architecture for image caption generation[C]// IEEE International Conference on Image Processing. IEEE, 2016.
