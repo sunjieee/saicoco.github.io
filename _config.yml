@@ -14,7 +14,7 @@ url:                https://saicoco.github.io
 permalink:          /:title/
 markdown:           kramdown
 # highlighter:        rouge
-highlighter: snippets
+highlighter: pygments
 kramdown:
   auto_ids:         true
   footnote_nr:      1
